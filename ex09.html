@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconhecimento</title>
+</head>
+<body>
+    <input type="text" name="text" id="text">
+    <input type="button" value="Aqui" onclick="calcular()">
+    <div id="aqui">
+
+    </div>
+    
+    <script>
+        function calcular() {
+            var pais = window.document.getElementById('#text')
+            aqui = window.document.getElementById('#aqui')
+            aqui.innerHTML = `Eu sou de ${pais}`
+        }    
+    </script>
+</body>
+</html>
