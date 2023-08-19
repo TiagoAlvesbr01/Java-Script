@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Modelo de exercicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Titulo</h1>
+    </header>
+    <section>
+        <div>
+            Testando...
+        </div>
+        <div>
+            Olá!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; ComercialAlves</p>
+    </footer>
+    <script>
+        function carregar() {
+            var msg = window.document.getElementById('msg')
+            var img =window.document.getElementById('imagem')
+            var data = new Date()
+            var hora = data.getHours()
+            msg.innerHTML = `Agora são ${hora} horas.`
+            if (hora >= 0 && hora <12) {
+                img.src ='dia.png'
+                document.body.style.background = black
+            }
+        }
+    </script>
+
+</body>
+</html>
