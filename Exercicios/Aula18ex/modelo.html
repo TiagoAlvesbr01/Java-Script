@@ -7,16 +7,16 @@
     <title>Modelo de exercicio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="carregar()">
     <header>
-        <h1>Titulo</h1>
+        <h1>Hora do dia</h1>
     </header>
     <section>
-        <div>
+        <div id="msg">
             Testando...
         </div>
-        <div>
-            Olá!
+        <div id="foto">
+            <img id="imagem" src="Imagens/dia.png" alt="dia">
         </div>
     </section>
     <footer>
@@ -27,11 +27,17 @@
             var msg = window.document.getElementById('msg')
             var img =window.document.getElementById('imagem')
             var data = new Date()
-            var hora = data.getHours()
-            msg.innerHTML = `Agora são ${hora} horas.`
-            if (hora >= 0 && hora <12) {
-                img.src ='dia.png'
-                document.body.style.background = black
+            var hora = 14
+            msg.innerHTML = `Agora são ${19} horas.`
+            if (hora >= 0 && hora < 12) {
+                img.src = "Imagens/dia.png"
+                document.body.style.background ="green"
+            } else if (hora >= 12 && hora <= 18) {
+                img.src="Imagens/tarde.png"
+                document.body.style.background="yellow"
+            } else {
+                img.src="Imagens/noite.png"
+                windowdocument.body.style.background = "red"
             }
         }
     </script>
