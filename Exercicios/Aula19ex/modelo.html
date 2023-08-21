@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Verificados de idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Vericador de idade</h1>
+    </header>
+    <section>
+        <div>
+       <p> Ano de Nascimento:<input type="number" name="txano" id="txano" min="0">
+       </p>
+       <p> Sexo: 
+       <input type="radio" name="radsex" id="mas">
+       <label for="mas"></label>Masculino 
+       <input type="radio" name="radsex" id="fem">Feminino
+       </p> 
+       <p>
+        <input type="button" value="Verificar" onclick="verificar()">
+       </p>
+        </div>
+        <div id="res">
+        Preencha os dados acima para ver o resultado
+        </div>
+    </section>
+    <footer>
+        <p>&copy; ComercialAlves</p>
+    </footer>
+    <script>
+        function verificar() {
+         var data = new Date()
+         var ano = data.getFullYear()
+         var fano = document.getElementById('txano')
+         var res = document.querySelector('div#res')
+         if (fano.value.length == 0 ||(fano.value) > ano) {
+            window.alert('[ERRO] Verifique os dados e tente novamente!')
+         } else {
+            var fsex = document.getElementsByName('radsex')
+            var idade = ano - Number(fano.value)
+            var genero =''
+            var img = document.createElement('img')
+            img.setAttribute('id', 'foto')
+
+            if (fsex[0].checked) {
+                genero = 'Homem'
+                if (idade >= 0 && idade < 10) { //Crianca
+                    img.setAttribute('src','../Imagens/criancam.png')
+            } else if (fsex[1].checked) {
+                genero = 'Mulher'
+            }
+             
+            res.innerHTML = `${genero} ${idade}`
+            res.appendChild(img)
+         
+            }
+        }
+        }
+    </script>
+
+</body>
+</html>
