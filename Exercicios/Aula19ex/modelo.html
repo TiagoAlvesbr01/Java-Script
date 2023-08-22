@@ -7,7 +7,7 @@
     <title>Verificados de idade</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="carregar()">
+<body>
     <header>
         <h1>Vericador de idade</h1>
     </header>
@@ -49,17 +49,38 @@
             if (fsex[0].checked) {
                 genero = 'Homem'
                 if (idade >= 0 && idade < 10) { //Crianca
-                    img.setAttribute('src','../Imagens/criancam.png')
-            } else if (fsex[1].checked) {
+                    img.setAttribute("src","adultof.png")
+                }   else if (idade < 21){
+                        //jovem
+                        img.setAttribute('src', '../Imagens/jovemm.png')
+                    } else if ( idade < 50) {
+                        //adulto
+                        img.setAttribute('src', '../Imagens/adultom.png')
+                    } else {
+                        //idoso
+                        img.setAttribute('src','../Imagens/idosom.png')
+                    }
+                 } else if (fsex[1].checked) {
                 genero = 'Mulher'
-            }
+            }  if (idade >= 0 && idade < 10) { // Crianca
+                   img.setAttribute('src', '../Imagens/criancaf.png')
+                } else if ( idade < 21) {
+                   //jovem
+                   img.setAttribute('src','../Imagens/jovemf.png')
+                } else if ( idade < 50) {
+                    //adulto
+                    img.setAttribute('src', '../Imagens/adultof.png')
+                } else {
+                    //idoso
+                    img.setAttribute('src','../Imagens/idosof.png')
+                }
              
             res.innerHTML = `${genero} ${idade}`
             res.appendChild(img)
          
             }
         }
-        }
+        
     </script>
 
 </body>
