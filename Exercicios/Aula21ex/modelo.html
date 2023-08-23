@@ -2,8 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,30 +13,37 @@
     <section>
         <div>
        <p> 
-        Número:<input type="number" name="txano" id="txano" min="0">
-        <input type="button" value="Gerar Tabuada" onclick="verificar()">
+        Número:<input type="number" name="numero" id="txn" min="0">
+        <input type="button" value="Gerar Tabuada" onclick="tabuada()">
        </p>
        
-       <p>
        
-       </p>
         </div>
         <div id="res">
-        Digite um número acima:
+              <select name="tabuada" id="seltab"></select>
         </div>
     </section>
     <footer>
         <p>&copy; ComercialAlves</p>
     </footer>
     <script>
-        function verificar() {
-         
-
-             
-            res.innerHTML = `${genero} ${idade}`
-         
-         
+        function tabuada() {
+            let num = document.getElementById('txn')
+            let tab = document.getElementById('seltab')
+            if(num.value.length == 0) {
+                window.alert('Por favor, digite um número')
+            } else {
+                let n = Number(num.value)
+                let c = 1
+                tab.innerHTML =''
+            } while (c <= 10) {
+                let itam = document.createElement('item')
+                item.text = `${n} ${c}`
+                item.value = `tab${c}`
+                tab.appendChild(itam)
+                c++
             }
+         }
         
         
     </script>

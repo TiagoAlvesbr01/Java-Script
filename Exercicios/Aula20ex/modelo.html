@@ -2,8 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vamos contar</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,21 +11,20 @@
         <h1>Vamos contar</h1>
     </header>
     <section>
-        <div>
+        <div id="dados">
        <p> 
-        Inicio:<input type="number" name="txano" id="txano" min="0">
+        Inicio:<input type="number" name="inicio" id="txi" min="0">
        </p>
       
        <p> 
-        Fim:<input type="number" name="fim" id="fim">
-       <label for="fim"></label>
+        Fim:<input type="number" name="fim" id="txf">
         </p> 
        
         <p>
-        Passo:<input type="number" name="passo" id="passo">
+        Passo:<input type="number" name="passo" id="txp">
         </p>
         <p>
-        <input type="button" value="Contar" onclick="verificar()">
+        <input type="button" value="Contar" onclick="contar()">
        </p>
         
         </div>
@@ -38,12 +36,36 @@
         <p>&copy; ComercialAlves</p>
     </footer>
     <script>
-        function verificar() {
-        var inicio = document.getElementsByName('txini')
-        var fim = document.getElementsByName('txfim')
-        var passo = document.getElementsByName('txpas')
+        function contar() {
+        var inicio = document.getElementById('txi')
+        var fim = document.getElementById('txf')
+        var passo = document.getElementById('txp')
         var res = document.getElementById('res')
-        if (inicio < )
+        if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0 ) {
+            window.alert('[ERRO] Faltam dados!')
+        } else {
+            res.innerHTML = 'Contando:<br>'
+            let i = Number(inicio.value)
+            let f = Number(fim.value)
+            let p = Number(passo.value)
+            if(p <= 0) {
+                window.alert('Passo invalido! Considerando PASSO 1')
+                P = 1
+            }
+            if (i < f) {
+                //Contagem crescente
+                for(let c = i; c <= f; c == p) {
+                   res.innerHTML += `${c}`
+                }
+            } else {
+                //Contagem regressiva
+                for(let c = i;c >= f;c -= p) {
+                    res.innerHTML += `${c}`
+                }
+            }
+
+             
+        }res.innerHTML += `${c}`
             }
         
         
