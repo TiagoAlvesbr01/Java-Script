@@ -16,11 +16,12 @@
         Número:<input type="number" name="numero" id="txn" min="0">
         <input type="button" value="Gerar Tabuada" onclick="tabuada()">
        </p>
-       
-       
         </div>
+        
         <div id="res">
-              <select name="tabuada" id="seltab"></select>
+              <select name="tabuada" id="seltab" size="10">
+                <option>Digite um número acima</option>
+              </select>
         </div>
     </section>
     <footer>
@@ -36,16 +37,17 @@
                 let n = Number(num.value)
                 let c = 1
                 tab.innerHTML =''
-            } while (c <= 10) {
-                let itam = document.createElement('item')
-                item.text = `${n} ${c}`
+             while (c <= 8) {
+                let item = document.createElement('option')
+                item.text = `${n} * ${c} = ${n*c}`
                 item.value = `tab${c}`
-                tab.appendChild(itam)
+                tab.appendChild(item)
                 c++
+            
             }
          }
         
-        
+        }  
     </script>
 
 </body>
