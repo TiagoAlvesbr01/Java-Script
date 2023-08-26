@@ -42,15 +42,21 @@
                 return false
             }
         }
-            function isLista() {
-                if(inLista.indxOf(Number(n)) != -1) {
+            function inLista(n, l) {
+                if(l.indexOf(Number(n)) != -1) {
                 return true
             }  else {
                 return false
             }
         }
             
-            function adicionar() {}
+            function adicionar() {
+            if(isNumero(num.value) && !inLista(num.value, valores)) { 
+                valores.push(Number(num.value))
+            } else {
+             window.alert('Valor invalido ou já encontrado na lista.')
+            }
+        }
         
     </script>
 
