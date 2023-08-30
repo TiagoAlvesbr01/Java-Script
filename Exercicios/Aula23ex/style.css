@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+header {
+    text-align: center;
+}
+
+body {
+    background-color: rgba(91, 32, 230, 0.42);
+}
+
+section {
+    background-color: rgb(107, 107, 195);
+    width: 300px;
+    margin: auto;
+    border-radius: 5px 5px;
+}
+
+.input {
+    margin: 5px;
+    border-radius: 5px 5px;
+}
+
+#so {
+    margin: auto;
+}
+
+div{
+    
+    background-color: white;
+    border-radius: 5px 5px;
+}
+
+footer {
+    text-align: center;
+}
+

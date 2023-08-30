@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Soma</h1></header>
+    <section>
+        <p>
+           <strong>Numero1:</strong> 
+            <input type="number" name="numero1" id="tx1" class="input">
+        </p>+
+        <p>
+            <strong>Numero2:</strong>
+            <input type="number" name="numero2" id="tx2" class="input" >
+        </p>
+        <p>
+            <input type="button" value="Somar" onclick="somar()">
+        </p>
+        <div id="res">
+        
+        </div>
+    </section>
+    <script>
+           function somar() {
+           let num1 = document.getElementById('tx1')
+           let num2 = document.getElementById('tx2')
+           let res = document.getElementById('res')
+           
+           
+           if(num1.value.length == 0 || num2.value.length == 0) {
+             res.innerHTML =''
+             res.innerHTML ='Digite um numero'
+               } else {
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+            for(let s = n1; s <= n2; s += n1 ) {
+            res.innerHTML += `Resultado é${s}.`
+           }
+           } 
+
+           }
+           </script>
+    <footer><strong>@CriadoPorComercialAlves</strong></footer>
+</body>
+</html>
