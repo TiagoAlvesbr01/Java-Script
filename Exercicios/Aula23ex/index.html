@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <img src="imagens/calculos2.jpg">
     <header><h1>Soma</h1></header>
-    <section>
+    <section >
+        
         <p>
            <strong>Numero1:</strong> 
             <input type="number" name="numero1" id="tx1" class="input">
@@ -25,24 +27,24 @@
         </div>
     </section>
     <script>
-           function somar() {
+          
            let num1 = document.getElementById('tx1')
            let num2 = document.getElementById('tx2')
            let res = document.getElementById('res')
            
-           
-           if(num1.value.length == 0 || num2.value.length == 0) {
-             res.innerHTML =''
-             res.innerHTML ='Digite um numero'
-               } else {
+           function somar() {
             let n1 = Number(num1.value)
             let n2 = Number(num2.value)
-            for(let s = n1; s <= n2; s += n1 ) {
-            res.innerHTML += `Resultado é${s}.`
-           }
+            s = n1*n2
+             
+            res.innerHTML = ''
+            res.innerHTML += `Resultado é ${s}.`
+            res.innerHTML 
+           
            } 
+           
 
-           }
+           
            </script>
     <footer><strong>@CriadoPorComercialAlves</strong></footer>
 </body>
