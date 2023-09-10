@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome completo</title>
+</head>
+<body>
+    <header>Nome completo</header>
+    <section>
+        <p>
+        Nome:
+        <input type="text" name="tx1" id="tx1">
+        </p>
+        <p>
+        Sobrenome:
+        <input type="text" name="tx2" id="tx2">
+        </p>
+        <input type="button" value="Enviar" onclick="Nome()">
+        <div id="res">
+         
+        </div>
+    </section>
+
+    <script>
+        let nome1 = document.getElementById('tx1')
+        let nome2 = document.getElementById('tx2')
+        let res = document.getElementById('res')
+
+        function Nome() {
+            let a = nome1
+            let b = nome2
+               tiago = a+b
+               alert = tiago
+
+               res.innerHTML +=`Seu nome completo é ${tiago}`
+
+        }
+    </script>
+</body>
+</html>
