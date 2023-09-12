@@ -8,6 +8,9 @@
     
    section {
        width: 200px;
-       height: 350px;
+       height: 320px;
+   }
+   #seltab {
+       width: 150px;
    }
 }  
