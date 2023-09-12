@@ -8,24 +8,24 @@
 </head>
 <body>
     <header>
-        <h1>Tabuada</h1>
+        <h1><strong>Tabuada</strong></h1>
     </header>
-    <section>
+    <section >
         <div>
        <p> 
-        Número:<input type="number" name="numero" id="txn" min="0">
+        <strong>Número:</strong><input type="number" name="numero" id="txn" min="0">
         <input type="button" value="Gerar Tabuada" onclick="tabuada()">
        </p>
         </div>
         
         <div id="res">
               <select name="tabuada" id="seltab" size="10">
-                <option>Digite um número acima</option>
+                <option><strong>Digite um número acima</strong></option>
               </select>
         </div>
     </section>
     <footer>
-        <p>&copy; ComercialAlves</p>
+        <p>&copy;<strong>CriadoPorComercialAlves</strong></p>
     </footer>
     <script>
         function tabuada() {
@@ -37,7 +37,7 @@
                 let n = Number(num.value)
                 let c = 1
                 tab.innerHTML =''
-             while (c <= 8) {
+             while (c <= 10) {
                 let item = document.createElement('option')
                 item.text = `${n} * ${c} = ${n*c}`
                 item.value = `tab${c}`
