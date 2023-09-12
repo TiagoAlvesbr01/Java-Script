@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 300px) and (max-width: 700px){
+@media screen and (min-width: 290px) and (max-width: 480px){
     
     body, html {
         background:red;
     }
     
    section {
-       width: 150px;
+       width: 200px;
        height: 300px;
    }
 }  
