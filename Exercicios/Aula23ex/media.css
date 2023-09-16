@@ -16,8 +16,35 @@
     body, html {
         width: 100%;
     }
+    body {
+        background-position: center center ;
+        background-size: cover ;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-attachment: fixed;
+    }
+   #img {
+    position: absolute;
+    top: 77%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+    #img {
+        width: 7%;
+        
+    }
+    #img2 {
+        width: 7%;
+    }
+    #img2 {
+        position: absolute;
+        top: 77%;
+        left: 57%;
+        transform: translate(-50%,-50%);
+    }
     section {
         width: 70%;
+        border: 2px solid rgba(11, 13, 14, 0.945)
     }
     footer {
         position: relative;

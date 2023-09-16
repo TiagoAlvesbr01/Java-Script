@@ -33,7 +33,27 @@ body > section {
     /*width: 20%;
     height: 120px;*/
 }
-
+#img2 {
+    border-radius: 30px;
+} 
+#img2 {
+    position: relative;
+    position: absolute;
+    top: 69%;
+    left: 52%;
+    transform: translate(-50%,-50%)
+}
+#img {
+    border-radius: 30px;
+}
+#img{
+    position: relative;
+    position: absolute;
+    top: 69%;
+    left: 49%;
+    transform: translate(-50%,-50%)
+    
+}
 section {
     background-color: rgb(107, 107, 195);
     width: 300px;
