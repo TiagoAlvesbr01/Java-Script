@@ -44,7 +44,11 @@ body > section {
     transform: translate(-50%,-50%)
 }
 #img {
-    border-radius: 30px;
+    border-radius: 90%;
+}
+
+#img:hover {
+    background-color: red;
 }
 #img{
     position: relative;
@@ -55,9 +59,10 @@ body > section {
     
 }
 section {
-    background-color: rgb(107, 107, 195);
+    background-color: #6b6bc3;
     width: 300px;
     border-radius: 5px 5px;
+    border: 2px solid rgba(0, 0, 0, 0.753);
 }
 
 .input {

@@ -6,13 +6,39 @@
     <title>Soma</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
+    <style>
+        #img:hover {
+            width: 30px;
+            border: 2px solid rgba(0, 0, 0, 0.329);
+            background-color: #6b6bc3;
+        }
+        #img2:hover {
+            width: 30px;
+            border: 2px solid rgba(0, 0, 0, 0.329);
+            background-color: #6b6bc3;
+        }
+        h1:hover {
+            color: #6b6bc3;
+            font-size: 50px;
+
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+        
+        #input:hover {
+            width: 60px;
+            border: 3px solid rgba(0, 0, 0, 0.836);
+        }
+    </style>
 </head>
 <body>
     
     <header><h1>Soma</h1></header>
     
     <a href="https://www.instagram.com/comercialalvesbr/" target="_blank"> <img src="imagens/insta.png" id="img2"></a>
-    <a href="#"> <img src="imagens/zap.png" id="img"></a>
+    <a href="https://wa.me/5588997508384" target="_blank"> <img src="imagens/zap.png" id="img"></a>
     <section >
         
         <p>
@@ -24,7 +50,7 @@
             <input type="number" name="numero2" id="tx2" class="input" >
         </p>
         <p>
-            <input type="button" value="Somar" onclick="somar()">
+            <input type="button" value="Somar" onclick="somar()"id="input">
         </p>
         <div id="res">
         
