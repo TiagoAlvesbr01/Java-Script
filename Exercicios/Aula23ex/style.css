@@ -7,7 +7,7 @@ header {
     text-align: center;
     position: relative;
     position: absolute;
-    top: 37%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -39,7 +39,7 @@ body > section {
 #img2 {
     position: relative;
     position: absolute;
-    top: 69%;
+    top: 70%;
     left: 52%;
     transform: translate(-50%,-50%)
 }
@@ -53,7 +53,7 @@ body > section {
 #img{
     position: relative;
     position: absolute;
-    top: 69%;
+    top: 70%;
     left: 49%;
     transform: translate(-50%,-50%)
     
@@ -81,6 +81,7 @@ div{
 }
 #res {
     background-color: lightgray;
+    text-align: center;
 }
 
 footer {
@@ -91,4 +92,9 @@ footer {
     left: 50%;
     transform: translate(-50%,-50%);
 }
+footer:hover {
+    font-size: 20px;
+    background-color:#6b6bc3;
+    border-radius: 10px;
+} 
 
