@@ -6,29 +6,37 @@
     , initial-scale=1.0">
     <title>Modelo de exercicio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body onload="carregar()">
     <header>
         <h1>Hora do dia</h1>
     </header>
+    
     <section>
         <div id="msg">
-            Testando...
+           <strong>Testando...</strong> 
         </div>
         <div id="foto">
             <img id="imagem" src="Imagens/dia.png" alt="dia">
         </div>
     </section>
     <footer>
-        <p>&copy; ComercialAlves</p>
+        <p><strong>&copy; ComercialAlves</strong></p>
     </footer>
+    <div>
+        <img src="Imagens/insta.png" id="img1">
+        <img src="Imagens/favicon-32x32.png" id="img2">
+        </div>
     <script>
         function carregar() {
             var msg = window.document.getElementById('msg')
-            var img =window.document.getElementById('imagem')
+            var img = window.document.getElementById('imagem')
             var data = new Date()
             var hora = data.getHours()
-            msg.innerHTML = `Agora são ${hora} horas.`
+            var dia = data.getDate()
+            let dia_sem = data.getDay()
+            msg.innerHTML = `<strong>Agora são exatamente ${hora} horas. Dia ${dia} mês. Semana ${dia_sem}<strong>`
             if (hora >= 0 && hora < 12) {
                 img.src = "Imagens/dia.png"
                 document.body.style.background ="yellow"

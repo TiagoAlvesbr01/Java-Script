@@ -11,8 +11,23 @@ header {
     color: white;
     margin: auto;
     text-align: center;
-
 }
+header:hover {
+    font-size: 20px;
+}
+#img1 {
+    border-radius: 30px;
+}
+#img1:hover{
+    border: 2px solid black;
+}
+#img2 {
+    border-radius: 30px;
+}
+#img2:hover {
+    border: 2px solid black;
+}
+
 
 section {
      background: white;
@@ -31,4 +46,7 @@ footer {
     color: white;
     text-align: center;
     font: italic;
+}
+footer:hover {
+    font-size: 20px;
 }
