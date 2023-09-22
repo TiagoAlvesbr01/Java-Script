@@ -8,4 +8,7 @@ section {
 #imagem {
     width: 70%;
 }
+#foto1 {
+    background-image: url(Imagens/night.jpg);
+}
 }

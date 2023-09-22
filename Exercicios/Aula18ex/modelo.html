@@ -10,7 +10,7 @@
 </head>
 <body onload="carregar()">
     <header>
-        <h1>Hora do dia</h1>
+        <h1 id="h1">Hora do dia</h1>
     </header>
     
     <section>
@@ -22,11 +22,11 @@
         </div>
     </section>
     <footer>
-        <p><strong>&copy; ComercialAlves</strong></p>
+        <p><strong>&copy; CriadoPorComercialAlves</strong></p>
     </footer>
     <div>
-        <img src="Imagens/insta.png" id="img1">
-        <img src="Imagens/favicon-32x32.png" id="img2">
+        <a href="https://www.instagram.com/comercialalvesbr/" target="_blank"><img src="Imagens/insta.png" id="img1"></a>
+       <a href="https://wa.me/5588997508384" target="_blank"> <img src="Imagens/favicon-32x32.png" id="img2"></a>
         </div>
     <script>
         function carregar() {
@@ -46,13 +46,19 @@
             msg.innerHTML +=`<p><strong>Dia ${dia} do mês de ${meses[data.getMonth()]} de ${ano}.</strong></p>`
             if (hora >= 0 && hora < 12) {
                 img.src = "Imagens/dia.png"
-                document.body.style.background ="yellow"
+                let h1 = document.getElementById('h1')
+                h1.innerHTML ='Bom dia!'
+                document.body.style.background ="rgba(218, 218, 31, 0.692)"
             } else if (hora >= 12 && hora <= 18) {
-                img.src="Imagens/tarde.png"
-                document.body.style.background="blue"
+                img.src="Imagens/tarde.webp"
+                let h1 = document.getElementById('h1')
+                h1.innerHTML ='Boa tarde!'
+                document.body.style.background="rgba(43, 43, 216, 0.685)"
             } else {
-                img.src="Imagens/noite.png"
-                document.body.style.background="black"
+                img.src="Imagens/night.jpg"
+                let h1 = document.getElementById('h1')
+                h1.innerHTML ='Boa noite!'
+                document.body.style.background="rgba(14, 12, 12, 0.397"
             }
         }
     </script>
