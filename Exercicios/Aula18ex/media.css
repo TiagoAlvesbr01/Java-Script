@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
-@media screen and (min-width:320px) and (max-width:600px) {
+@media screen and (min-width:280px) and (max-width:600px) {
 
 section {
+    width: 70%;
+}
+#imagem {
     width: 70%;
 }
 }
