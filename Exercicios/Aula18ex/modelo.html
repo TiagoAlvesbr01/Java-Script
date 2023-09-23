@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="media.css">
 </head>
 <body onload="carregar()">
+    
     <header>
         <h1 id="h1">Hora do dia</h1>
     </header>
-    
+    <img id="imagem">
     <section>
         <div id="msg">
            <strong>Testando...</strong> 
         </div>
         <div id="foto">
-            <img id="imagem" src="Imagens/dia.png" alt="dia">
+           
         </div>
     </section>
     <footer>
@@ -44,23 +45,24 @@
             msg.innerHTML =`<p><strong>Agora são exatamente ${hora} horas e ${min} minutos.<strong></p>`
             msg.innerHTML +=`<p><strong>${dias_sem[data.getDay()]}.</strong></p>`
             msg.innerHTML +=`<p><strong>Dia ${dia} do mês de ${meses[data.getMonth()]} de ${ano}.</strong></p>`
-            if (hora >= 0 && hora < 12) {
-                img.src = "Imagens/dia.png"
+            if (hora >= 0 && hora <= 12) {
+                img.src = "Imagens/dia3.jpg"
                 let h1 = document.getElementById('h1')
                 h1.innerHTML ='Bom dia!'
                 document.body.style.background ="rgba(218, 218, 31, 0.692)"
             } else if (hora >= 12 && hora <= 18) {
-                img.src="Imagens/night.jpg"
+                img.src="Imagens/tarde.png"
                 let h1 = document.getElementById('h1')
                 h1.innerHTML ='Boa tarde!'
                 document.body.style.background="rgba(43, 43, 216, 0.685)"
-            } else 
+            } else {
                 img.src="Imagens/night.jpg"
                 let h1 = document.getElementById('h1')
                 h1.innerHTML ='Boa noite!'
                 document.body.style.background="rgba(14, 12, 12, 0.397)"
-            
+            }
         }
+        /*<img id="imagem" src="Imagens/dia.png" alt="dia">*/
     </script>
 
 </body>

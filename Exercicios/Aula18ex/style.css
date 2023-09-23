@@ -1,15 +1,33 @@
 
+/*position: relative;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);*/
 
 
-
+* {
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+}
 body {
-    
+    height: 100%vh;
     font: normal 15px arial;
-    
-
+    background-image: url(Imagens/dia.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header {
+    position: relative;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
     color: white;
     margin: auto;
     text-align: center;
@@ -19,15 +37,28 @@ header:hover {
 }
 
 #imagem {
-    width: 70%;
+    width: 100%;
 }
 #img1 {
+    position: relative;
+    position: absolute;
+    top: 55%;
+    left: 49%;
+    transform: translate(-50%,-50%);
+
     border-radius: 30px;
+
 }
 #img1:hover{
     border: 2px solid rgba(0, 0, 0, 0.377);
 }
 #img2 {
+    position: relative;
+    position: absolute;
+    top: 55%;
+    left: 52%;
+    transform: translate(-50%,-50%);
+
     border-radius: 30px;
 }
 #img2:hover {
@@ -36,6 +67,12 @@ header:hover {
 
 
 section {
+    position: relative;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
      background: white;
      width: 500px;
      margin: auto;
@@ -49,6 +86,12 @@ div {
     padding: 10px;
 }
 footer {
+    position: relative;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
     color: white;
     text-align: center;
     font: italic;
