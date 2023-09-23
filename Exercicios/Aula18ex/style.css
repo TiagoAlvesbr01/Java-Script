@@ -12,7 +12,7 @@ transform: translate(-50%,-50%);*/
     border: 0%;
 }
 body {
-    height: 100%vh;
+    
     font: normal 15px arial;
     background-image: url(Imagens/dia.png);
     background-position: center center;
@@ -63,6 +63,7 @@ header:hover {
 }
 #img2:hover {
     border: 2px solid rgba(0, 0, 0, 0.37);
+    font-size: 2px;
 }
 
 
