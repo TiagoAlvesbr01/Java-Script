@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+</head>
+<style>
+    
+    body {
+        background-color: rgba(11, 11, 189, 0.692);
+        text-align: center;
+    }
+    input#item {
+        border-radius: 5px;
+        padding: 10px;
+        border: 10px;
+        width: 250px;
+        text-align: center;
+    }
+    input#botao {
+        border: 25px;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: rgb(19, 206, 190);
+        color: white;
+    }
+    section {
+        background-color: white;
+        width: 70%;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    h1 {
+        color: rgba(0, 0, 255, 0.699);
+    }
+    footer {
+        border: 10px;
+        color: white;
+    }
+</style>
+<body>
+    <p>
+    <form id="form-itens">
+    <input type="text" name="receber-item" id="receber-item" placeholder="Digite o item que deseja adicionar"><br>
+    </p>
+    <p>
+    <input type="button" value="Salvar item" id="botao">
+    </p>
+    </form>
+    <section>
+        <div>
+            <h1>Lista de compras</h1>
+            maca
+            laranja
+        </div>
+        <div>
+             <h1>Comprados</h1>
+             abacaxi
+             manga
+        </div>
+       
+        
+    </section>
+    <footer>DesenvolvidoPorComercialAlves</footer>
+    <script>
+        let listaDeItens = []
+
+        const form = document.getElementById("form-itens")
+        const itensInput = document.getElementById("receber-item")
+
+        form.addEventListener("button", function (event) {
+            event.preventDefault()
+            salvarItem()
+        })
+
+        function salvarItem() {
+            let comprasItem = itensInput.value;
+
+            listaDeItens= {
+                valor: comprasItem 
+            }
+            
+            
+        }
+        console.log(listaDeItens)
+    </script>
+</body>
+</html>
