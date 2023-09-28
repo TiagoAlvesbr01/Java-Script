@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando array</title>
+</head>
+<body>
+    <h1>Acessar primeiro item do Array</h1>
+    <span id="primeiro-item"></span>
+    <h1>Acessar segundo item do Array</h1>
+    <span id="segundo-item"></span>
+    <h1>Acessar terceiro item do Array</h1>
+    <span id="terceiro-item"></span>
+    <h1>Adicionar item como primeiro</h1>
+    <span id="add-item"></span>
+    <h1>Acessar ultimo item</h1>
+    <span id="ultimo-item"></span>
+    <h1>Adicionar item como ultimo</h1>
+    <span id="add-itemfinal"></span>
+    <h1>Remover item do Array</h1>
+    <span id="remover-item final"></span>
+    <h1>Listar dados do Array</h1>
+    <span id="listar-cores"></span>
+    <script>
+        let cor = ['azul','amarelo','branco','lilas','roxo']
+        console.log(cor)
+        
+    
+        document.getElementById('primeiro-item').innerHTML = cor[0] 
+       /* cor1 = document.getElementById('primeiro-item') // Pode-se usar essas 2 formas pra chamar
+        cor1.innerHTML = cor[0]*/
+        document.getElementById('segundo-item').innerHTML = cor[1]
+        console.log(cor[1])
+        document.getElementById('terceiro-item').innerHTML = cor[2]
+        console.log(cor[2])
+        document.getElementById('ultimo-item').innerHTML = cor[cor.length-1] /*Acessa ultimo item. Voçe usa -1,pq comeca a contar do 0 e a contagem é diminuindo menos -1*/
+        cor.unshift('zulu')/*Add item no inicio*/
+        console.log(cor)
+        cor.push('kiwi')/*Add item no final*/
+        console.log(cor)
+        cor.shift(cor)/*Remove item no inicio*/
+        console.log(cor)
+        cor.pop(cor)/*Remove item no final*/
+        console.log(cor)
+        cor.splice(2,3)/*Remove itens pelo indice/numeraçao.(pos, n) No lado esquerdo que vai começar dele e lado direito indica quantos vao ser no total removidos*/
+        console.log(cor)
+        cor.forEach(function(item, indice ){
+            console.log(item, indice);
+            document.getElementById('listar-cores').insertAdjacentHTML('beforeend',indice + "-" + item +'<br>');/*Serve para voçe imprimir na tela do usuario a lista de todos os dados do Array*/
+        });
+          
+        /*let mercado = ['Arroz', 'Acucar','Cafe', 'Macarrão','Oleo','Ovos','Pão','Refrigerante','Sal']
+        console.log(mercado)
+        mercado.forEach(function(item, indice) {
+            console.log(indice +'-'+ item)
+        })*/
+        
+       
+
+        
+    </script>
+</body>
+</html>

@@ -6,10 +6,13 @@
     <title>Criando Objeto</title>
 </head>
 <body>
-    <div id="teste">
-        teste
-    </div>
+
     <h1>Criando Obejto</h1>
+    <h2>Objeto casa</h2>
+    <h3>Mostrar propiedade</h3>
+     <span id="teste"></span>
+     <h3>Mostrar propiedade</h3>
+     <span id="teste2"></span>
     <script>
         /*let usuarios = [
         {
@@ -32,9 +35,37 @@
         console.log(usuarios[2].nome)
         console.log(usuarios[1].profissão)
         */
-       let cor =  [ 'azul', 'rosa', 'black'];
+       /*let cor =  [ 'azul', 'rosa', 'black'];
        
-       console.log('cor[2]')
+       console.log(cor);
+       
+       document.getElementById('teste').innerHTML = cor.length*/
+
+       let casa = { /*Criando objeto de forma literal*/
+            rua : 27,
+            cor: 'Azul',
+            comodos: 6,
+            proprietario: 'Tiago',
+        }
+        console.log(casa)/*Para mostrar todos os itens*/
+        console.log(casa.rua)/*Para mostrar determinada propiedade*/
+        delete casa.rua/*Serve para apagar uma propiedade*/
+        console.log(casa)
+        document.getElementById('teste').innerHTML= 'Propietario-' + casa.proprietario /*Serve pra imprimir na tela a propriedade do objeto*/
+        casa.turbo = 20/*Para acrescentar uma propriedade no objeto digite o objeto e . e depois o nome da propriedade objeto.propriedade*/    
+        document.getElementById('teste2') .innerHTML= 'Cor-' + casa.cor 
+        console.log(casa)
+
+        let apartamento = new Object() /*Criando bjeto*/
+             apartamento.cor = 'vermelho'
+             apartamento.tamanho = '48m'
+             apartamento.comodos = 8
+             console.log(apartamento)
+
+        
+            
+        
+
         
     </script>
 </body>
