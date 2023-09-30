@@ -42,11 +42,28 @@
        document.getElementById('teste').innerHTML = cor.length*/
 
        let casa = { /*Criando objeto de forma literal*/
-            rua : 27,
-            cor: 'Azul',
+            rua: 'Coronel Alves',
+            numero : 27,
+            cor: ['Azul','Black'],
             comodos: 6,
-            proprietario: 'Tiago',
-        }
+            proprietario: {
+                        nome:'Tiago',
+                        sobrenome:'Alves',
+        },
+            latir: function() {
+                console.log(`Essa casa ${this.cor[0]} é do ${casa.proprietario.nome}, e ela tem ${casa.comodos} comodos. `)
+            }
+            
+       }
+        /*Notação de ponto só aceita se for membro literal do objeto. Nesse método aceita qualquer variavel*/
+            let correr = 'Altura'/*Assim o usuario add propriedades para o objeto*/
+            let myDataValue = '1.75m'/*Assim o usuario add propriedades para o objeto*/
+            casa[correr]= myDataValue
+           
+       
+             
+
+
         console.log(casa)/*Para mostrar todos os itens*/
         console.log(casa.rua)/*Para mostrar determinada propiedade*/
         delete casa.rua/*Serve para apagar uma propiedade*/
@@ -60,13 +77,73 @@
              apartamento.cor = 'vermelho'
              apartamento.tamanho = '48m'
              apartamento.comodos = 8
-             console.log(apartamento)
+             console.log(apartamento)/*Acesso ao objeto*/
 
-        
+
+             casa.latir()/*Acesso ao metodo*/
+             console.log(casa.cor[1])/*Acesso ao array*/
+             console.log(casa.proprietario.nome)/*Acesso a uma propriedade de um sub-objeto dentro do objeto*/
+             console.log(casa['proprietario'] ['sobrenome'])/*Outra forma de acessar objtos usando notação com colchetes. Obs: Diferença do array é que voçê procura pelo nome e não pelo índice/número*/
+             casa.rua= 'setembro'/*Aqui voçe seta/atualiza dados do objeto*/
+             console.log(casa.rua)
+             casa.proprietario.nome= 'Katarina'/*Aqui voçe atualiza dados do sub-objeto*/
+             console.log(casa['proprietario'] ['nome'])
+             casa['proprietario']['nome'] = 'Charlote'  /*Usando colchetes tambem se seta/atualiza dados do objeto*/ 
+             console.log(casa.proprietario.nome)          
+             casa['olhos'] = 'castanho'/*Aqui eu add uma propriedade ao objeto*/
+             casa.despedida= function() {/*Aqui se add uma funcao ao objeto*/
+                console.log('Adeus a todos!')
+             }
+             console.log(casa['olhos'])
+             casa.despedida()
+             console.log(casa[correr])           
+             this/*Palavra-chave que significa 'esse' e se refere ao objeto.Muito usado em funçoes construtoras*/
+             var minhaNotificacao = new Notification('Hello!')
             
-        
+             OPP/*Programmação Orientada a Objetos, criar, modelar e reproduzir objetos do mundo real dentro de nossos programas*/
+            encaupsular/*Dados, codigos, informaçoes,funcionalidade, funcoes relacionadas e armazenadas ordenadas dentro de um pacote de objeto*/
+            abstração/*Criar um modelo simples de algo complexo, para mostrar o mais importante*/
+            instanciadeobjetos/*Objetos que contem dados e a funcionalidade definida na classe. O pacote de todos os dados é a instancia*/
+            /*
+            class Person (name) { Parametro chamada do construtor é o valor dentro do parenteser, ela sera o retorno da funcao e acionara em outra função
+                this.name = name;
+                this.greeting = function() {
+                    alert('Hi! I\'m ' + this.name + '.');
+                };
+            }
+            */
+            instanciacao/*Assim que o pacote/instancia/pai de dados forem criado pela classe, pode se criar novos padroes/filhas a partir dele e assim instancias filhas*/
+            herdar/*Copiar recuros,dados,funcionalidades da classe pai.Para que voçe possa reutilar nas novas classe sem que precise duplica-las*/
+            poliformismo/*Capacidade de multiplos tipos de objeto implementar a mesma funcionalidade*/
+            construtores/*Fornecem os meios para criar quantos objetos são necessarios de forma eficaz, anexando dados e funçoes a eles.Eles definem basicamente propriedades e metodos*/
 
-        
+            function Person(name) {
+                this.name = name;
+                this.greeting = function() {
+                  alert('Hi! I\'m ' + this.name + '.');
+            };
+            
+            var person1 = new Person('Bob') Dessa forma voçe cria um novo objeto/instancia herdando tudo do pai.
+            var person2 = new Person('Sarah')
+
+            person1.name
+            person1.greeting()
+            person2.name
+            person2.greeting()
+        }
+
+        {
+         name: 'Bob',
+         greeting: function() {
+          alert('Hi! I\'m ' + this.name + '.');
+        }
+
+        {
+        name: 'Sarah',
+        greeting: function() {
+          alert('Hi! I\'m ' + this.name + '.');
+         }
+        }
     </script>
 </body>
 </html>
