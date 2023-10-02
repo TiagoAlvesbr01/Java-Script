@@ -97,7 +97,7 @@
              console.log(casa['olhos'])
              casa.despedida()
              console.log(casa[correr])           
-             this/*Palavra-chave que significa 'esse' e se refere ao objeto.Muito usado em funçoes construtoras*/
+             this/*Palavra-chave que significa 'esse' e se refere ao objeto.Muito usado em funçoes construtoras. Serve para quando voçe criar novas instancias/obejtos eles vao se referir somente ao objto em que eles pertecem*/
              var minhaNotificacao = new Notification('Hello!')
             
              OPP/*Programmação Orientada a Objetos, criar, modelar e reproduzir objetos do mundo real dentro de nossos programas*/
@@ -116,7 +116,9 @@
             herdar/*Copiar recuros,dados,funcionalidades da classe pai.Para que voçe possa reutilar nas novas classe sem que precise duplica-las*/
             poliformismo/*Capacidade de multiplos tipos de objeto implementar a mesma funcionalidade*/
             construtores/*Fornecem os meios para criar quantos objetos são necessarios de forma eficaz, anexando dados e funçoes a eles.Eles definem basicamente propriedades e metodos*/
-
+            /* new Palavre-chave funcao construtora.Que informar ao navegador que desejamos criar um novo ojeto, seguida pelo nome da funçao com seus paramentos obrigatórios entre parenteses*/
+            
+            /*
             function Person(name) {
                 this.name = name;
                 this.greeting = function() {
@@ -134,16 +136,62 @@
 
         {
          name: 'Bob',
-         greeting: function() {
+         greeting = function() {
           alert('Hi! I\'m ' + this.name + '.');
         }
-
+    }   
         {
         name: 'Sarah',
-        greeting: function() {
+        greeting = function() {
           alert('Hi! I\'m ' + this.name + '.');
          }
         }
+        */
+       function Person(first,last,age, interests) {/*Criando objto de forma literal*/
+          this.name = {
+            first : first,
+            last : last
+          }
+          this.age = age
+          this.interests = interests
+          this.bio = function() {
+            alert(this.first + '' + this.name.last + 'is' + this.age + ' years old' + this.interests[1]+'.')
+          }
+          this.greeting = function() {
+            alert('Ola, eu sou'+ this.name.first)
+          }
+       }
+       var person1 = new Person ('Bob', 'Smith','32','male',['muscic','skiing']) /* Criando objto com construtor/new .Vai criar uma instancia com esses paramentros*/
+             person1['age']/*Para voçe acessar as propriedades*/
+            person1.interests[1]
+            person1.bio()
+        // etc.
+       /*Criando objeto com o construtor new Object()
+       Voçe add propriedades e metodos usando notação de ponto, colchetes.*/
+       var person1 = new Object();
+
+       person1.name = 'Chris';/*Pode add usando notação de ponto*/
+        person1['age'] = 38;/*Pode add usando colchetes*/
+        person1.greeting = function() {
+        alert('Hi! I\'m ' + this.name + '.');
+        }
+
+        /*Criando objeto com literal e com construtor new Object*/
+        var person1 = new Object({
+        name: 'Chris',
+        age: 38,
+         greeting: function() {
+             alert('Hi! I\'m ' + this.name + '.');
+         }
+        });
+        /*Criando objeto com método create()
+        Criar instancias de objeto sem primeiro criar os construtores*/
+        var person2 = Object.create(person1);
+        person2.name
+        person2.greeting()
+
+        Prototipos/*Mecanismo pelo qual ojetos herdam recursos uns dos outros*/
+
     </script>
 </body>
 </html>
