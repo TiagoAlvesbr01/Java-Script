@@ -190,8 +190,55 @@
         person2.name
         person2.greeting()
 
-        Prototipos/*Mecanismo pelo qual ojetos herdam recursos uns dos outros*/
+        Prototipos/*Mecanismo pelo qual ojetos herdam recursos uns dos outros. Uma propriedade/objeto que contem muitos valores/funcoes definidos herdados, que acompanha a nova instancia/objeto. Geralmente, quando voçê for criar um objeto a partir de outro usando um método, esse método que séra invocado já está inserido dentro do objeto*/
+        ModificandoPrototipos/*Se voçe add um novo método no objeto prototipo do construtorr/pai.Todas as instancias teram essa nova funcionalidade. O construtor/pai serve com uma central que controla todas as instancias/filhas
+        Person.prototype.(nome da funcionalidade). Assim se add.*/
+        [[prototype]]/*Propriedade interna. Que serve para acessar a cadeia de prototipos de um ojeto*/
+        _proto_/*Propriedade interna que contem o objeto prototipo do construtor do objeto*/
+        Herança/*Significa usar métodos/funcoes do construtor/pai na instancia/constutora/filha, apenas chamando por meio de funcoes como call/chamar, sem a necessidade de criar novos códigos. Usar sem precisar fazer.*/
+        Herdando(doConstrutorSemParamentros)/*Se o construtor que voçe esta herdando nao tomar valores suas propriedades, nao sera necessario especifica-los como argumentos adicionais em call().
+           function BlueGlassBrick() {
+              Brick.call(this);
 
-    </script>
+             this.opacity = 0.5;
+             this.color = "blue";
+        }*/
+        /*extends, palavra-chave que usamos para informar ao JS qual classe queremos basear nossa classe
+        class Teacher extends Person*/
+        super()/*Operador que quando usado,chamara o construtor/pai e herdara os que espercificamos la.
+        super(first, last, age, gender, interests)*/
+        getters/setters/*São métodos usados pra alterar valores de atributos
+         get subject() {
+             return this._subject;
+  }
+
+         set subject(newSubject) {
+             this._subject = newSubject;
+         }*/
+         cadeiadeprototipos/**/
+         delegacao/*Compartilhamento de funcionalidades entre objetoss*/
+         ReutilizaçãoDeCódigo/*Objetos,funçoes,loops,herança,*/
+         JSON/*JavaScript Ojection Notation- É um formato baseado em texto padrao para representar dados estruturados com base na sintaxe do objeto JavaScript. Comumente usado para transferir dados do servidor para cliente. Usados em aplicativos Web. Outras linguagens podem ler e criar. Ele existe como uma string. Precisa ser convertido em objeto. O objeto JSON pode ser armazenado em seu proprio arquivo .json. Voçe pode incluir nele, string,números, arrays, funçoes, booleas, matrizes.
+         {
+            "squadName": "Super hero squad",
+            "homeTown": "Metro City",
+            "formed": 2016,
+            "secretBase": "Super tower",
+            "active": true,
+            "members": [
+                {
+                "name": "Molecule Man",
+                "age": 29,
+                "secretIdentity": "Dan Jukes",
+                "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+                },
+                    superHeroes.homeTown;
+                    superHeroes["active"]; 
+
+                    superHeroes["members"][1]["powers"][2];
+
+                    Para acessar seus dados*/
+                    XMLHttpRequest/*Chamada API- É um objeto JS, que permite fazer proteçoes de rede para recuperar recursos de um servidor JS(imagens,texto,JSON,) */
+</script>
 </body>
 </html>
