@@ -15,7 +15,7 @@
         border-radius: 5px;
         padding: 10px;
         border: 10px;
-        width: 250px;
+        
         text-align: center;
     }
     input#botao {
@@ -45,26 +45,51 @@
     <input type="text" name="receber-item" id="receber-item" placeholder="Digite o item que deseja adicionar"><br>
     </p>
     <p>
-    <input type="button" value="Salvar item" id="botao">
+    <input type="button" value="Salvar item" id="botao" onclick="ListadeCompras">
     </p>
     </form>
     <section>
         <div>
             <h1>Lista de compras</h1>
-            <p><strong>Maça</strong></p>
-            <p><strong>Laranja</strong></p>
+            <p><strong>&#8226;Arroz</strong></p>
+           <p><strong>&#8226;Açucar</strong></p>
+            <p><strong>&#8226;Farinha</strong></p>
+            <p><strong>&#8226;Maça</strong></li></p>
+           <p><strong>&#8226;Laranja</strong></li></p>
+           <p><strong>&#8226;Uva</strong></p>
+        
         </div>
         <div>
              <h1>Comprados</h1>
             <p><strong>Abacaxi</strong>&check;</p> 
-            <p><strong>Macarujá</strong>&check;</p> 
+            <p><strong>Iogurte</strong>&check;</p> 
+            <p><strong>Macarujá</strong>&check;</p>
+            <p><strong>Tangerina</strong>&check;</p>
         </div>
        
         
     </section>
     <footer>&copy;DesenvolvidoPorComercialAlves</footer>
     <script>
-        let listaDeItens = []
+            let lista = []
+        
+            function ListadeCompras() {
+                let receberitem = document.getElementById('receber-item').value
+                let salvarItem = document.getElementById('botao')
+                for(let i in lista)
+                if (receberitem == lista[i]){
+                    window.alert('ok')
+                } else {
+                    window.alert('ok')
+                }
+
+            }
+            
+            function comprados(){
+                
+            }
+        
+        /*let listaDeItens = []
 
         const form = document.getElementById("form-itens")
         const itensInput = document.getElementById("receber-item")
@@ -84,6 +109,14 @@
             
         }
         console.log(listaDeItens)
+        */
+       var idade = 35
+       if (idade < 30) {
+        console.log('rei dos piratas')
+       } else {
+        console.log( 'a rua')
+       }
+
     </script>
 </body>
 </html>
