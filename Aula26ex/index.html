@@ -6,7 +6,7 @@
     <title>Lista de compras</title>
 </head>
 <style>
-    
+    /*
     body {
         background-color: rgba(11, 11, 189, 0.692);
         text-align: center;
@@ -37,57 +37,48 @@
     footer {
         border: 10px;
         color: white;
-    }
+    }*/
 </style>
 <body>
-    <p>
-    <form id="form-itens">
-    <input type="text" name="receber-item" id="receber-item" placeholder="Digite o item que deseja adicionar"><br>
-    </p>
-    <p>
-    <input type="button" value="Salvar item" id="botao" onclick="ListadeCompras">
-    </p>
-    </form>
-    <section>
-        <div>
-            <h1>Lista de compras</h1>
-            <p><strong>&#8226;Arroz</strong></p>
-           <p><strong>&#8226;Açucar</strong></p>
-            <p><strong>&#8226;Farinha</strong></p>
-            <p><strong>&#8226;Maça</strong></li></p>
-           <p><strong>&#8226;Laranja</strong></li></p>
-           <p><strong>&#8226;Uva</strong></p>
+    
+    
+    <input type="text" id="produto" placeholder="Coloque item que deseja adicionar"><br>
+    
+    
+    <button id="btn">Enviar</button>
+    
+    
+    
         
-        </div>
-        <div>
-             <h1>Comprados</h1>
-            <p><strong>Abacaxi</strong>&check;</p> 
-            <p><strong>Iogurte</strong>&check;</p> 
-            <p><strong>Macarujá</strong>&check;</p>
-            <p><strong>Tangerina</strong>&check;</p>
-        </div>
+            <h1>Lista de compras</h1>
+            <ul id="lista">
+           <li>Arroz</li>
+            
+            </ul>
        
         
-    </section>
+    
     <footer>&copy;DesenvolvidoPorComercialAlves</footer>
     <script>
-            let lista = []
-        
-            function ListadeCompras() {
-                let receberitem = document.getElementById('receber-item').value
-                let salvarItem = document.getElementById('botao')
-                for(let i in lista)
-                if (receberitem == lista[i]){
-                    window.alert('ok')
-                } else {
-                    window.alert('ok')
-                }
-
-            }
             
+        
+            
+                let produto = document.getElementById('produto')
+                let botao = document.getElementById('btn')
+                let lista= document.getElementById('lista')
+
+                botao.addEventListener('click', addProduto)
+
+                function addProduto() {
+                let item = '<li>'+ produto.value + '</li>' 
+                 lista.innerHTML += item
+        }
+             
+            /*
             function comprados(){
-                
-            }
+                 <p><strong>Tangerina</strong>&check;</p>
+            <p><strong>&#8226;Uva</strong></p>
+            }*/
         
         /*let listaDeItens = []
 
@@ -110,12 +101,12 @@
         }
         console.log(listaDeItens)
         */
-       var idade = 35
+       /*var idade = 35
        if (idade < 30) {
         console.log('rei dos piratas')
        } else {
         console.log( 'a rua')
-       }
+       }*/
 
     </script>
 </body>

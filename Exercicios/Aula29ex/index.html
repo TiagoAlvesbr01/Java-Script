@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        section {
+            width: 30%;
+            background-color: blue;
+            margin: auto;
+        }
+    
+    </style>
 </head>
 <body>
-    Óla, seja
+    
+    <input type="text" id="produto">
+    <button id="btn">Enviar</button>
+
+    
+    <ul id="lista">
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Macarrão</li>
+    </ul>
+
+    <script>
+        let lista = document.getElementById('lista')
+        let produto = document.getElementById('produto')
+        let botao = document.getElementById('btn')
+
+        botao.addEventListener('click', addProduto) 
+
+        function addProduto() {
+            let item = '<li>'+ produto.value + '</li>' 
+            lista.innerHTML += item
+            produto.value = ''
+            produto.focus()
+        }
+        produto.addEventListener('keyup', function(e){
+            if (e.keyCode === 13) {
+                addProduto()
+            }
+        })
+
+    </script>
 </body>
 </html>
