@@ -6,30 +6,47 @@
     <title>Lista de compras</title>
 </head>
 <style>
-    /*
+    
     body {
         background-color: rgba(11, 11, 189, 0.692);
         text-align: center;
     }
-    input#item {
+    input#produto {
+        background-color: rgba(11, 153, 189, 0.692);
         border-radius: 5px;
         padding: 10px;
         border: 10px;
-        
+        margin-top: 5%;
         text-align: center;
     }
-    input#botao {
+    #produto2 {
+        background-color: rgba(11, 153, 189, 0.692);
+        border-radius: 5px;
+        padding: 10px;
+        border: 10px;
+        margin-top: 5%;
+        text-align: center;
+    } 
+    input#btn {
         border: 25px;
         border-radius: 5px;
         padding: 10px;
         background-color: rgb(19, 206, 190);
         color: white;
+        margin-top: 5%;
+        
     }
     section {
         background-color: white;
         width: 40%;
         margin: auto;
         margin-bottom: 15px;
+        border-radius: 10px;
+        margin-top: 10%;
+    }
+    #separador {
+        width: 100%;
+        background: rgba(11, 11, 189, 0.692);
     }
     h1 {
         color: rgba(0, 0, 255, 0.699);
@@ -37,12 +54,14 @@
     footer {
         border: 10px;
         color: white;
-    }*/
+    }
 </style>
 <body>
     
-    
-    <input type="text" id="produto" placeholder="Coloque item que deseja adicionar"><br>
+    <section>
+   <p>
+     <input type="text" id="produto" placeholder="Coloque item que deseja adicionar"><br>
+   </p>
     
     
     <button id="btn">Enviar</button>
@@ -51,12 +70,25 @@
     
         
             <h1>Lista de compras</h1>
-            <ul id="lista">
-           <li>Arroz</li>
-            
-            </ul>
-       
-        
+            <div id="lista">
+            <p><strong>&#8226;Arroz&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&#128077;&#128686;</strong></p> 
+           <p><strong>&#8226;Uva&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&#128077;&#128686;</strong></p>
+            </div>
+            <div id="input2">
+           <p>
+           <input type="text" id="produto2" placeholder="Digite o produto comprado">
+            </p>
+           <button id="btn2">Comprado</button>
+            </div>
+            <div id="separador">-</div>
+            <div>
+            <h1>Comprados</h1>
+            <div id="lista2">
+            <p><strong>Tangerina &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;<img src=imagens/cheke-16x16.png></strong> </p></strong>
+           
+            </div>
+        </div>
+        </section>
     
     <footer>&copy;DesenvolvidoPorComercialAlves</footer>
     <script>
@@ -66,19 +98,31 @@
                 let produto = document.getElementById('produto')
                 let botao = document.getElementById('btn')
                 let lista= document.getElementById('lista')
+                
 
-                botao.addEventListener('click', addProduto)
+                botao.addEventListener('click', addProduto)/*Quando houver um evento do tipo 'click', ele vai disparar uma função. No paramentro voçe add o tipo de evento e a função*/
 
                 function addProduto() {
-                let item = '<li>'+ produto.value + '</li>' 
+                let item =  '<p> '+' <strong>&#8226;' + produto.value + '</strong>  '+'   '+'  '+' &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;  <img src=imagens/like2-16x16.png> <img src=imagens/lixeira-16x16.png> </p>'   /*Tudo o que tiver nas aspas, vai entrar como padrão no que for digitado no input produto*/
                  lista.innerHTML += item
-        }
-             
-            /*
-            function comprados(){
-                 <p><strong>Tangerina</strong>&check;</p>
-            <p><strong>&#8226;Uva</strong></p>
-            }*/
+                 produto.value = ''
+                 produto.focus()
+                }
+
+                let produto2 = document.getElementById('produto2')
+                let btn2 = document.getElementById('btn2')
+                let lista2 = document.getElementById('lista2')
+
+                btn2.addEventListener('click', addComprados)
+
+                function addComprados() {
+                    let item2 = '<p>' +' <strong>' + produto2.value +' &nbsp; &nbsp;&nbsp; &nbsp; <img src=imagens/cheke-16x16.png> </p>'
+                    lista2.innerHTML += item2
+                    produto2.value = ''
+                    produto2.focus()
+
+                }
+            
         
         /*let listaDeItens = []
 
@@ -96,8 +140,10 @@
             listaDeItens= {
                 valor: comprasItem 
             }
-            
-            
+            &#10004;&#65039; check
+            &#128077; like
+            &#128686;lixeira
+            &check; emoji
         }
         console.log(listaDeItens)
         */
@@ -106,7 +152,14 @@
         console.log('rei dos piratas')
        } else {
         console.log( 'a rua')
+
        }*/
+                /*let img1 = document.createElement('img') Serve para criar um elemento no HTML
+                let foto1 = document.createTextNode('../imagens/like2-16x16.png') Aqui sera o conteudo do elemento
+                img1.appendChild(foto1) Aqui voçe confirmar junta o elemento com o conteudo
+                let body1 = document.querySelector('body') Aqui voçe chama o body
+                console.log(img1)
+                body1.appendChild(img1) Aqui voçe o body com novo elemento*/
 
     </script>
 </body>
