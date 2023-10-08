@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de compras</title>
+    <title>Agenda</title>
 </head>
 <style>
     
@@ -36,6 +36,15 @@
         margin-top: 5%;
         
     }
+    input#btn2 {
+        border: 25px;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: rgb(19, 206, 190);
+        color: white;
+        margin-top: 5%;
+        
+    }
     section {
         background-color: white;
         width: 40%;
@@ -56,85 +65,97 @@
         color: white;
     }
 </style>
+<header>
+    <h1>Agenda</h1>
+</header>
 <body>
     
     <section>
-   <p>
-     <input type="text" id="produto" placeholder="Coloque item que deseja adicionar"><br>
-   </p>
-    
-    
-    <button id="btn">Enviar</button>
-    
-    
-    
-        
-            <h1>Lista de compras</h1>
-            <div id="lista">
-            <p><strong>&#8226;Arroz&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&#128077;&#128686;</strong></p> 
-           <p><strong>&#8226;Uva&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&#128077;&#128686;</strong></p>
-            </div>
-            <div id="input2">
            <p>
-           <input type="text" id="produto2" placeholder="Digite o produto comprado">
+               <input type="text" id="produto" placeholder="Coloque item que deseja adicionar"><br>
             </p>
-           <button id="btn2">Comprado</button>
-            </div>
-            <div id="separador">-</div>
-            <div>
-            <h1>Comprados</h1>
-            <div id="lista2">
-            <p><strong>Tangerina &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;<img src=imagens/cheke-16x16.png></strong> </p></strong>
-           
-            </div>
+    
+             <input type="button" id="btn" value="Enviar" onclick="addProduto()">
+    
+        <h1>Lista de compras</h1>
+        <div id="lista">
+            <p><strong>&#8226;Arroz&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&#128077;&#128686;</strong></p> 
+            <p><strong>&#8226;Uva&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&#128077;&#128686;</strong></p>
         </div>
-        </section>
+        <div id="input2">
+           <p>
+             <input type="text" id="produto2" placeholder="Digite o produto comprado">
+           </p>
+            <input type="button" id="btn2" value="Comprado" onclick="addComprados()">
+        </div>
+        <div id="separador">-</div>
+        <div>
+            <h1>Comprados</h1>
+        <div id="lista2">
+            <p> <strong>Tangerina &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;<img src=imagens/cheke-16x16.png></strong> 
+            </p></strong>
+           
+        </div>
+        </div>
+    </section>
     
     <footer>&copy;DesenvolvidoPorComercialAlves</footer>
     <script>
-            
+        class Produto {}
         
-            
+            function addProduto() {
+
                 let produto = document.getElementById('produto')
                 let botao = document.getElementById('btn')
                 let lista= document.getElementById('lista')
                 
-
-                botao.addEventListener('click', addProduto)/*Quando houver um evento do tipo 'click', ele vai disparar uma função. No paramentro voçe add o tipo de evento e a função*/
-
-                function addProduto() {
                 let item =  '<p> '+' <strong>&#8226;' + produto.value + '</strong>  '+'   '+'  '+' &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;  <img src=imagens/like2-16x16.png> <img src=imagens/lixeira-16x16.png> </p>'   /*Tudo o que tiver nas aspas, vai entrar como padrão no que for digitado no input produto*/
-                 lista.innerHTML += item
-                 produto.value = ''
-                 produto.focus()
-                }
+                lista.innerHTML += item
+                produto.value = ''
+                produto.focus()
+
+                let lerDados = this.lerDados()
+
+            }
+
+            function lerDados() {
+                let produto = {}
+
+                document.getElementById('produto').value
+
+                return produto
+            
+            }
+               
+            function addComprados() {
 
                 let produto2 = document.getElementById('produto2')
                 let btn2 = document.getElementById('btn2')
                 let lista2 = document.getElementById('lista2')
 
-                btn2.addEventListener('click', addComprados)
+                let item2 = '<p>' +' <strong>' + produto2.value +' &nbsp; &nbsp;&nbsp; &nbsp; <img src=imagens/cheke-16x16.png> </p>'
+                lista2.innerHTML += item2
+                produto2.value = ''
+                produto2.focus()
 
-                function addComprados() {
-                    let item2 = '<p>' +' <strong>' + produto2.value +' &nbsp; &nbsp;&nbsp; &nbsp; <img src=imagens/cheke-16x16.png> </p>'
-                    lista2.innerHTML += item2
-                    produto2.value = ''
-                    produto2.focus()
-
-                }
-            
+            }
         
-        /*let listaDeItens = []
+            
+               /* botao.addEventListener('click', addProduto)/*Quando houver um evento do tipo 'click', ele vai disparar uma função. No paramentro voçe add o tipo de evento e a função*/
 
-        const form = document.getElementById("form-itens")
-        const itensInput = document.getElementById("receber-item")
+               /*btn2.addEventListener('click', addComprados)Serve para criar um evento no HTML e chamalo por meio de uma funcao/método mesma coisa que colocar onclick no input*/
 
-        form.addEventListener("button", function (event) {
+             /*let listaDeItens = []
+
+              const form = document.getElementById("form-itens")
+             const itensInput = document.getElementById("receber-item")
+
+            form.addEventListener("button", function (event) {
             event.preventDefault()
             salvarItem()
-        })
+             })
 
-        function salvarItem() {
+             function salvarItem() {
             let comprasItem = itensInput.value;
 
             listaDeItens= {
@@ -144,22 +165,22 @@
             &#128077; like
             &#128686;lixeira
             &check; emoji
-        }
-        console.log(listaDeItens)
-        */
-       /*var idade = 35
-       if (idade < 30) {
-        console.log('rei dos piratas')
-       } else {
-        console.log( 'a rua')
+            }
+            console.log(listaDeItens)
+            */
+            /*var idade = 35
+            if (idade < 30) {
+            console.log('rei dos piratas')
+            } else {
+            console.log( 'a rua')
 
-       }*/
-                /*let img1 = document.createElement('img') Serve para criar um elemento no HTML
-                let foto1 = document.createTextNode('../imagens/like2-16x16.png') Aqui sera o conteudo do elemento
-                img1.appendChild(foto1) Aqui voçe confirmar junta o elemento com o conteudo
-                let body1 = document.querySelector('body') Aqui voçe chama o body
-                console.log(img1)
-                body1.appendChild(img1) Aqui voçe o body com novo elemento*/
+              }*/
+            /*let img1 = document.createElement('img') Serve para criar um elemento no HTML
+            let foto1 = document.createTextNode('../imagens/like2-16x16.png') Aqui sera o conteudo do elemento
+            img1.appendChild(foto1) Aqui voçe confirmar junta o elemento com o conteudo
+            let body1 = document.querySelector('body') Aqui voçe chama o body
+            console.log(img1)
+            body1.appendChild(img1) Aqui voçe o body com novo elemento*/
 
     </script>
 </body>
