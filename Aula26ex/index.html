@@ -11,6 +11,20 @@
         background-color: rgba(11, 11, 189, 0.692);
         text-align: center;
     }
+    #h1 {
+        background-color: white;
+        color: black;
+        width: 40%;
+        margin: auto;
+        margin-bottom: 3%;
+        border-radius: 5px;
+    }
+    #h1:hover {
+        
+        color: white;
+        background-color: black;
+        
+    }
     input#produto {
         background-color: rgba(11, 153, 189, 0.692);
         border-radius: 5px;
@@ -36,6 +50,11 @@
         margin-top: 5%;
         
     }
+    #btn:hover {
+        background-color: rgba(0, 0, 0, 0.534);
+        color: white;
+    }
+    
     input#btn2 {
         border: 25px;
         border-radius: 5px;
@@ -45,13 +64,21 @@
         margin-top: 5%;
         
     }
+    #btn2:hover {
+        background-color: rgba(0, 0, 0, 0.534);
+        color: white;
+    }
     section {
         background-color: white;
         width: 40%;
+        
         margin: auto;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         border-radius: 10px;
-        margin-top: 10%;
+        margin-top: 3%;
+    }
+    .h2:hover {
+        color: black;
     }
     #separador {
         width: 100%;
@@ -61,23 +88,62 @@
         color: rgba(0, 0, 255, 0.699);
     }
     footer {
+        margin: auto;
+        width: 40%;
         border: 10px;
-        color: white;
+        border-radius: 5px;
+        color: bla;
+        background-color: white;
     }
+    footer:hover {
+        font-size: 20px;
+        color: white;
+        background-color: black;
+        width: 40%;
+        margin: auto;
+        border-radius: 5px;
+    }
+    #zap {
+        
+        position: relative;
+        position: absolute;
+        transform: translate(-47%,-1%);
+        
+        border-radius: 30px;
+    }
+    #zap:hover {
+        border: 2px solid rgba(0, 0, 0, 0.377);
+        }
+    
+    #inst {
+        position: relative;
+        position: absolute;
+        
+        left: 47%;
+        transform: translate(-50%,-1%);
+        border-radius: 30px;
+}
+    
+    #inst:hover {
+        border: 2px solid rgba(0, 0, 0, 0.377);
+
+}
+        
+    
 </style>
 <header>
-    <h1>Agenda</h1>
+    <h1 id="h1">Agenda</h1>
 </header>
 <body>
     
     <section>
            <p>
-               <input type="text" id="produto" placeholder="Coloque item que deseja adicionar"><br>
+               <input type="text" id="produto" placeholder="Adicione item que deseja comprar" autocomplete=""><br>
             </p>
     
              <input type="button" id="btn" value="Enviar" onclick="addProduto()">
     
-        <h1>Lista de compras</h1>
+        <h1 class="h2">Lista de compras</h1>
         <div id="lista">
             <p><strong>&#8226;Arroz&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&#128077;&#128686;</strong></p> 
             <p><strong>&#8226;Uva&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&#128077;&#128686;</strong></p>
@@ -90,7 +156,7 @@
         </div>
         <div id="separador">-</div>
         <div>
-            <h1>Comprados</h1>
+            <h1 class="h2">Comprados</h1>
         <div id="lista2">
             <p> <strong>Tangerina &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;<img src=imagens/cheke-16x16.png></strong> 
             </p></strong>
@@ -99,32 +165,60 @@
         </div>
     </section>
     
-    <footer>&copy;DesenvolvidoPorComercialAlves</footer>
+    <footer><strong>&copy;DesenvolvidoPorComercialAlves</strong></footer>
+    <a href="https://www.instagram.com/comercialalvesbr/" target="_blank"> <img src="imagens/insta32x32.png" alt="" id="inst"></a>
+    <a href="https://wa.me/5588997508384" target="_blank"><img src="imagens/zap-32x32.png" alt="" id="zap"></a>
     <script>
         class Produto {}
-        
+            
+            constructor() {
+                this.arrayProdutos = []
+            }
+
             function addProduto() {
 
                 let produto = document.getElementById('produto')
                 let botao = document.getElementById('btn')
                 let lista= document.getElementById('lista')
                 
-                let item =  '<p> '+' <strong>&#8226;' + produto.value + '</strong>  '+'   '+'  '+' &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;  <img src=imagens/like2-16x16.png> <img src=imagens/lixeira-16x16.png> </p>'   /*Tudo o que tiver nas aspas, vai entrar como padrão no que for digitado no input produto*/
+                let item =  '<p> '+' <strong>&#8226;' + produto.value + '</strong>  '+'   '+'  '+' &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp; &#128077;&#128686;  </p>'   /*Tudo o que tiver nas aspas, vai entrar como padrão no que for digitado no input produto*/
                 lista.innerHTML += item
                 produto.value = ''
                 produto.focus()
 
                 let lerDados = this.lerDados()
 
+                if(this.validaCampos(produto)) {
+                    alert('salvar')
+                }
+
+            }
+
+            function (produto) {
+                this.arrayProdutos.push(produto)
             }
 
             function lerDados() {
                 let produto = {}
 
-                document.getElementById('produto').value
+                produto.nomeProduto= document.getElementById('produto').value
 
-                return produto
+                return produto;
             
+            }
+
+            function validaCampos(produto) {
+                let msg = ''
+
+                if(produto.nomeProduto == '') {
+                    msg += '= Informe o nome do Produto \n';
+                }
+
+                if(img!=!) {
+                    alert(msg);
+                    return false
+                }
+                return true
             }
                
             function addComprados() {
@@ -139,7 +233,8 @@
                 produto2.focus()
 
             }
-        
+            /*<img src=imagens/like2-16x16.png>*/ 
+            /*<img src=imagens/lixeira-16x16.png>*/
             
                /* botao.addEventListener('click', addProduto)/*Quando houver um evento do tipo 'click', ele vai disparar uma função. No paramentro voçe add o tipo de evento e a função*/
 
