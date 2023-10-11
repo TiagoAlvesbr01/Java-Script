@@ -13,10 +13,9 @@ body,html {
 }
 
 section {
-    width: 40%;
-}
-#produto1 {
     width: 70%;
+}
+
 }
 #imagem {
     width: 100%;
@@ -40,5 +39,4 @@ section {
 }
 #foto1 {
     background-image: url(Imagens/night.jpg);
-}
 }
