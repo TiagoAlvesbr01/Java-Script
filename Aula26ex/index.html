@@ -173,11 +173,11 @@
     <a href="https://www.instagram.com/comercialalvesbr/" target="_blank"> <img src="imagens/insta32x32.png" alt="" id="inst"></a>
     <a href="https://wa.me/5588997508384" target="_blank"><img src="imagens/zap-32x32.png" alt="" id="zap"></a>
     <script>
-       /* class Produto {}
-            
+        class Produto {}
+            /*imgDelete.setAttribute('onclick', 'produto.deletar()'*/
             constructor() {
                 this.arrayProdutos = []
-            }*/
+            }
 
             function addProduto() {
 
@@ -190,14 +190,22 @@
                 produto.value = ''
                 produto.focus()
 
-               /* let lerDados = this.lerDados()
+                let lerDados = this.lerDados()
 
                 if(this.validaCampos(produto)) {
                     alert('salvar')
-                }*/
-
+                }
+                this.listaTabela()
+                this.cancelar()
             }
-            /*
+            listaTabela() { /*Aqui os itens irao ficar listados*/
+                for(let i =o; i < this.arrayProdutos.length; i++) {
+
+                    produto.innerHTML = this.arrayProdutos[i].nomeProduto
+
+                }
+            }
+            
             function (produto) {
                 this.arrayProdutos.push(produto)
             }
@@ -223,7 +231,7 @@
                     return false
                 }
                 return true
-            }*/
+            }
                
             function addComprados() {
 
@@ -235,6 +243,12 @@
                 lista2.innerHTML += item2
                 produto2.value = ''
                 produto2.focus()
+
+            }
+            cancelar() {
+                document.getElementById('produto').value =''
+            }
+            deletar() {
 
             }
             /*<img src=imagens/like2-16x16.png>*/ 
