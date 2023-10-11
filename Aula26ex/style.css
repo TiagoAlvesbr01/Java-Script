@@ -1,11 +1,9 @@
 @charset "UTF-8";
 
-@media screen and (min-width:220px) and (max-width:600px) {
+@media screen and (max-width: 600px) {
    
-    
-
     section {
-        width: 80%;
+        width: 90%;
     }
     
     footer {
@@ -20,4 +18,4 @@
         left: 60%;
         transform: translate(-50,-50);
     }
-}
+ }
