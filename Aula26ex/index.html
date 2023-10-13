@@ -145,7 +145,7 @@
                <input type="text" id="produto" placeholder="Adicione item que deseja comprar"><br>
             </p>
     
-             <input type="button" id="btn" value="Enviar" onclick="addProduto()">
+             <input type="button" id="btn" value="Enviar" onclick="produto.addProduto()">
     
         <h1 class="h2">Lista de compras</h1>
         <div id="lista">
@@ -173,13 +173,13 @@
     <a href="https://www.instagram.com/comercialalvesbr/" target="_blank"> <img src="imagens/insta32x32.png" alt="" id="inst"></a>
     <a href="https://wa.me/5588997508384" target="_blank"><img src="imagens/zap-32x32.png" alt="" id="zap"></a>
     <script>
-        class Produto {}
-            /*imgDelete.setAttribute('onclick', 'produto.deletar()'*/
+       /* class Produto {
+            /*imgDelete.setAttribute('onclick', 'produto.deletar()'
             constructor() {
                 this.arrayProdutos = []
-            }
+            }*/
 
-            function addProduto() {
+            function addProduto() {/*Aqui é o botao de enviar para a lista de compras.*/
 
                 let produto = document.getElementById('produto')
                 let botao = document.getElementById('btn')
@@ -190,15 +190,17 @@
                 produto.value = ''
                 produto.focus()
 
-                let lerDados = this.lerDados()
+               /* let lerDados = this.lerDados()
 
                 if(this.validaCampos(produto)) {
                     alert('salvar')
                 }
                 this.listaTabela()
                 this.cancelar()
+                */
             }
-            listaTabela() { /*Aqui os itens irao ficar listados*/
+            /*
+            listaTabela() { /*Aqui os itens irao ficar listados
                 for(let i =o; i < this.arrayProdutos.length; i++) {
 
                     produto.innerHTML = this.arrayProdutos[i].nomeProduto
@@ -210,7 +212,7 @@
                 this.arrayProdutos.push(produto)
             }
 
-            function lerDados() {
+            lerDados() {
                 let produto = {}
 
                 produto.nomeProduto= document.getElementById('produto').value
@@ -219,19 +221,19 @@
             
             }
 
-            function validaCampos(produto) {
+            validaCampos(produto) {
                 let msg = ''
 
                 if(produto.nomeProduto == '') {
                     msg += '= Informe o nome do Produto \n';
                 }
 
-                if(img!=!) {
+                if(img!='') {
                     alert(msg);
                     return false
                 }
                 return true
-            }
+            }*/
                
             function addComprados() {
 
@@ -245,12 +247,18 @@
                 produto2.focus()
 
             }
-            cancelar() {
+            /*cancelar() {
                 document.getElementById('produto').value =''
             }
             deletar() {
-
-            }
+                for(let i = 0; i < this.arrayProdutos.length; i++) {
+                    if(this.arrayProdutos[i].id == id) {
+                        this.arrayProdutos.splice(i, 1);
+                    }
+                }  
+            }*/
+        
+        /*var produto = new Produto() /*Aqui vai chamar o classe*/
             /*<img src=imagens/like2-16x16.png>*/ 
             /*<img src=imagens/lixeira-16x16.png>*/
             
