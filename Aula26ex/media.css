@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width:200px) and (max-width: 500px) {
    
     section {
-        width: 90%;
+        width: 10%;
     }
     
     footer {
