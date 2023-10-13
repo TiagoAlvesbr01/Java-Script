@@ -15,14 +15,23 @@
     <main>
         <div class="title">
             <h2>Produtos</h2>
+            <spaw>Lista de produtos da minha loja</spaw>
         </div>
-        
-    </main>
-    <div class="card">
-        <h1>CONTROLE DE PRODUTOS</h1>
+        <div class="card">
+            <div class="lineimput">
+                <label>Produto</label>
+                <input type="text" name="" id="produto" placeholder="Nome do produto">
+            </div>
 
-        <input type="button" value="Adicionar" onclick="produto.adicionar()">
-        <input type="button" value="Cancelar" onclick="produto.cancelar()">
-    </div>
+            <div class="lineimput">
+                <label>Valor</label>
+                <input type="text" name="" id="valor" placeholder="Valor do produto">
+            </div>
+    
+            <input type="button" value="Adicionar" onclick="produto.adicionar()">
+            <input type="button" value="Cancelar" onclick="produto.cancelar()">
+        </div>
+    </main>
+    
 </body>
 </html>
