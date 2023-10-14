@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha loja</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="script1.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https: //fonts.googleapis.com/css2? família= Nunito+Sans:opsz,wght@6..12.400;6..12.700 & display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -18,18 +24,36 @@
             <spaw>Lista de produtos da minha loja</spaw>
         </div>
         <div class="card">
-            <div class="lineimput">
+            <div class="lineinput">
                 <label>Produto</label>
                 <input type="text" name="" id="produto" placeholder="Nome do produto">
             </div>
 
-            <div class="lineimput">
+            <div class="lineinput">
                 <label>Valor</label>
-                <input type="text" name="" id="valor" placeholder="Valor do produto">
+                <input type="text" name="" id="preco" placeholder="Valor do produto">
             </div>
     
-            <input type="button" value="Adicionar" onclick="produto.adicionar()">
-            <input type="button" value="Cancelar" onclick="produto.cancelar()">
+            <input type="button" value="Salvar" onclick="produto.salvar()" class="input2">
+            <input type="button" value="Cancelar" onclick="produto.cancelar()" class="input2">
+        </div>
+
+        <div class="content">
+            <table border="1">
+                <thead>
+                    <th class="center">ID</th>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                    <td>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </td>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
         </div>
     </main>
     
