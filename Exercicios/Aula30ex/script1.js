@@ -14,16 +14,17 @@ class Produto {
        }
 
        this.listaTabela()
+       this.cancelar()
         
     }
-    listaTabela() {/*Aqui vamos lista os itens dentro do array*/
+    listaTabela() {/*Aqui vamos lista os itens dentro do array. Criamos um método que percorre todos os itens do array*/
         let tbody = document.getElementById('tbody')
-        tbody.innerHTML =''
+        tbody.innerHTML = ''
 
-        for(let i =0; i < this.arrayProdutos.length; i++) {
-            let tr = tbody.insertRow()
+        for(let i =0; i < this.arrayProdutos.length; i++) {/*Percorre todo o array, onde o que for </maior que i/0 será add + 1,2,3, ...*/
+            let tr = tbody.insertRow()/*Cria uma nova linha no tbody*/
 
-            let td_id = tr.insertCell()/*Aqui vai ser criado uma coluna*/
+            let td_id = tr.insertCell()/*Aqui vai ser criado uma coluna no ID*/
             let td_produto = tr.insertCell()
             let td_valor = tr.insertCell()
             let td_acoes = tr.insertCell()
@@ -32,7 +33,16 @@ class Produto {
             td_produto.innerHTML = this.arrayProdutos[i].nomeProduto
             td_valor.innerHTML = this.arrayProdutos[i].preco
 
-            td_id.classList.add('center')/*Faz criar uma class dentro do td_id. Todos os nomes vao ser listados 1 abaixo do outro*/
+            td_id.classList.add('center')/*Faz criar uma class dentro do td_id. Serve para puxar configuraçoes do CSS/Style dinamicamente*/
+
+            let imgEdit = document.createElement('img')/*Aqui se cria um novo elemento.*/
+            imgEdit.src = 'edit.png'/*Aqui se add o endereço do conteudo do novo elemento*/
+            td_acoes. appendChild(imgEdit)/*Dentro do td_açoes/pai vai ser add imagens/filha*/
+
+            let imgDelete = document.createElement('img')
+            imgDelete.src = 'lixeira.png'
+            imgDelete.setAttribute('onclick','produto.deletar('+ this.arrayProdutos[i].id +')')/*Aqui se cria, quando voçe clicar na img, vai acionar um método. Dá vida a um elemento*/
+            td_acoes.appendChild(imgDelete)
             
         } 
 
@@ -71,8 +81,24 @@ class Produto {
 
     }
    
-    cancelar() {
-        alert('Esse item sera cancelado')
+    cancelar() {/*Quando o usuario apertar em cancelar, os inputs irão se apagar*/
+        document.getElementById('produto').value = ''
+        document.getElementById('preco').value = ''
     }
-}
+
+    deletar(id) {/*Metodo para deletar o id.*/
+
+        let tbody = document.getElementById('tbody')/*Vamos deletar o linha que esta dentro do tbody*/
+
+        for(let i = 0; i < this.arrayProdutos; i++){/*Apartir de zero, todo aquele maior que i/0 dentro do array vai ser apagado*/
+        if(this.arrayProdutos[i].id == id) {/*Se o id do array for igual ao id do produto*/
+            this.arrayProdutos.splice(i,1)/*Então o id  do array será apagado*/
+            tbody.deleteRow(i)
+        }
+
+        }console.log(this.arrayProdutos)
+    }
+    }
+    
+    
 var produto = new Produto();

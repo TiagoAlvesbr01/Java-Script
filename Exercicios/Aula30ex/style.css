@@ -30,6 +30,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 3px;
     outline: 0;/*Isso tira a borda ao redor*/
+    cursor: pointer;
 }
 .input2 {
     border: 0px;
@@ -59,4 +60,11 @@ table th, td {
     padding: 1px 5px;
     text-align: left;
 }
-
+.center {
+    text-align: center;
+}
+img {
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+}
