@@ -38,6 +38,7 @@ class Produto {
             let imgEdit = document.createElement('img')/*Aqui se cria um novo elemento.*/
             imgEdit.src = 'edit.png'/*Aqui se add o endereço do conteudo do novo elemento*/
             td_acoes. appendChild(imgEdit)/*Dentro do td_açoes/pai vai ser add imagens/filha*/
+            imgEdit.setAttribute('onclick','produto.preparaEditacao('+ JSON.stringify(this.arrayProdutos[i]) +')')
 
             let imgDelete = document.createElement('img')
             imgDelete.src = 'lixeira.png'
@@ -51,6 +52,9 @@ class Produto {
         this.arrayProdutos.push(produto)
         this.id++
 
+    }
+    preparaEditacao(dados) {
+        
     }
     lerDados() {/*Aqui os itens serao lidos e depois salvos no método salvar(). Aqui foi 1 primeira parte a ser feito no JS*/ 
         let produto = {}
@@ -87,10 +91,10 @@ class Produto {
     }
 
     deletar(id) {/*Metodo para deletar o id.*/
+        if(confirm('Deseja realmente deletar o produto do ID' + id)) {
+            let tbody = document.getElementById('tbody')/*Vamos deletar o linha que esta dentro do tbody*/
 
-        let tbody = document.getElementById('tbody')/*Vamos deletar o linha que esta dentro do tbody*/
-
-        for(let i = 0; i < this.arrayProdutos; i++){/*Apartir de zero, todo aquele maior que i/0 dentro do array vai ser apagado*/
+        for(let i = 0; i < this.arrayProdutos.length; i++){/*Apartir de zero, todo aquele maior que i/0 dentro do array vai ser apagado*/
         if(this.arrayProdutos[i].id == id) {/*Se o id do array for igual ao id do produto*/
             this.arrayProdutos.splice(i,1)/*Então o id  do array será apagado*/
             tbody.deleteRow(i)
@@ -98,6 +102,8 @@ class Produto {
 
         }console.log(this.arrayProdutos)
     }
+        }
+        
     }
     
     
