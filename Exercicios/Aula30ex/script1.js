@@ -3,6 +3,7 @@ class Produto {
     constructor() { /*Atributos/modelos */ 
         this.id = 1
         this.arrayProdutos = []/*Quando o cliente apertar em salvar, o metodo salvar() chama o metodo lerDados(), deposi ele joga dentro desse array*/
+        this.imgEdit = null /*Toda que vez que ele for diferente de null, esta fazendo uma edição. E quando for igual esta fazendo uma inserção.*/
         
     }
 
@@ -10,14 +11,18 @@ class Produto {
        let produto = this.lerDados()
 
        if(this.validaCampos(produto)) {
+        if(this.imgEdit == null) {/*Se imgEdit for igual a null, então faz inserção/adicionar produto*/
          this.adicionar(produto)
+        } else {/*Se não, faz edicão/atualiza*/
+            this.atualizar(this.imgEdit, produto)
+        }
        }
 
        this.listaTabela()
        this.cancelar()
         
     }
-    listaTabela() {/*Aqui vamos lista os itens dentro do array. Criamos um método que percorre todos os itens do array*/
+    listaTabela() {/*Aqui vamos listar os itens dentro do array. Criamos um método que percorre todos os itens do array*/
         let tbody = document.getElementById('tbody')
         tbody.innerHTML = ''
 
@@ -53,7 +58,23 @@ class Produto {
         this.id++
 
     }
-    preparaEditacao(dados) {
+    atualizar(id, produto) {/*Esse metodo faz atualizar na coluna o item que foi levado para o input*/
+        for (let i= 0; i < this.arrayProdutos.length; i++) {/*i recebe 0, enquanto i for menor que o array, entao vai somar i +*/
+        if(this.arrayProdutos[i].id == id) {/*Se id do array for igual ao id do coluna*/
+        this.arrayProdutos[i].id.nomeProduto = produto.nomeProduto
+        this.arrayProdutos[i].preco = produto.preco 
+
+        }
+
+        }
+    }
+    preparaEditacao(dados) {/*Aqui é o metodo da imagem de editar. Quando o usuario clicar, o item volta para os inputs pra fazer alteraçoes e depois atualiza e volta para a tabela*/
+    this.imgEdit = dados.id
+
+    document.getElementById('produto').value = dados.nomeProduto/*Aqui faz o item da tabela voltar para o input para ser atualizado*/
+    document.getElementById('preco').value = dados.preco
+
+    document.getElementById('btn1').innerHTML = 'Atualizar'/*Quando o item voltar para o input, a botao de salvar vai virar 'Atualizar'*/
         
     }
     lerDados() {/*Aqui os itens serao lidos e depois salvos no método salvar(). Aqui foi 1 primeira parte a ser feito no JS*/ 
@@ -104,7 +125,8 @@ class Produto {
     }
         }
         
-    }
+    } /*<input type="button" value="Salvar" id="btn1" onclick="produto.salvar()" class="input2">
+    <input type="button" value="Cancelar" onclick="produto.cancelar()" class="input2">*/
     
     
 var produto = new Produto();
