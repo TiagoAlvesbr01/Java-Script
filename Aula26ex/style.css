@@ -2,6 +2,7 @@ body {
     background-color: rgba(11, 11, 189, 0.692);
     text-align: center;
 }
+
 #h1 {
     background-color: white;
     color: black;
@@ -62,7 +63,7 @@ input#btn2 {
 section {
     background-color: white;
     
-    
+    width: 60%;
     margin: auto;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -82,7 +83,7 @@ h1 {
 }
 footer {
     margin: auto;
-   
+    width: 60%;
     border: 10px;
     border-radius: 5px;
     
