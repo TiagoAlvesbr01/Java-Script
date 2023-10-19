@@ -47,13 +47,14 @@ class Produto {
 
             let imgDelete = document.createElement('img')
             imgDelete.src = 'lixeira.png'
-            imgDelete.setAttribute('onclick','produto.deletar('+ this.arrayProdutos[i].id +')')/*Aqui se cria, quando voçe clicar na img, vai acionar um método. Dá vida a um elemento*/
+            imgDelete.setAttribute('onclick','produto.deletar('+this.arrayProdutos[i].id +')')/*Aqui se cria, quando voçe clicar na img, vai acionar um método. Dá vida a um elemento*/
             td_acoes.appendChild(imgDelete)
             
         } 
 
     }
     adicionar(produto) {/*Aqui vai add itns no array*/
+        
         this.arrayProdutos.push(produto)
         this.id++
 
@@ -61,7 +62,7 @@ class Produto {
     atualizar(id, produto) {/*Esse metodo faz atualizar na coluna o item que foi levado para o input*/
         for (let i= 0; i < this.arrayProdutos.length; i++) {/*i recebe 0, enquanto i for menor que o array, entao vai somar i +*/
         if(this.arrayProdutos[i].id == id) {/*Se id do array for igual ao id do coluna*/
-        this.arrayProdutos[i].id.nomeProduto = produto.nomeProduto
+        this.arrayProdutos[i].nomeProduto = produto.nomeProduto
         this.arrayProdutos[i].preco = produto.preco 
 
         }
