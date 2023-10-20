@@ -1,6 +1,18 @@
 @charset "UTF-8";
 
 @media screen  and (min-width: 280px) and (max-width: 500px){
-    
+    *{
+        margin:0px;
+    }
+    body, html{
+        
+       width: 100%;
+       background-image: url(multas2.png);
+    }
 }
-    
+@media screen  and (min-width: 505px) and (max-width: 700px){
+    body{
+        background-color: pink;
+        
+    }
+}
