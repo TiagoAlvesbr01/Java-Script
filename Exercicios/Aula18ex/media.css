@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media screen and (min-width:280px) and (max-width:600px) {
+@media screen and (min-width:280px) and (max-width:500px) {
 header {
     position: relative;
     position: absolute;
@@ -8,18 +8,23 @@ header {
     left: 50%;
     transform: translate(-50%,-50%);
 }
-body,html {
-    height: 100%;
-}
+
 
 section {
     width: 70%;
 }
-
+body {
+    height: 100%vh;
+}
 }
 #imagem {
     width: 100%;
-    height: 100%vh;
+    height: 100vh;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 #img1 {
     width: 5%;
