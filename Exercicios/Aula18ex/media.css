@@ -11,7 +11,12 @@ header {
 
 
 section {
-    width: 70%;
+    width: 300px;
+    position: relative;
+    position: absolute;
+    top: 85%;
+    left: 47%;
+    transform: translate(-50%,-50%);
 }
 body {
     height: 100%vh;
@@ -27,21 +32,30 @@ body {
     background-attachment: fixed;
 }
 #img1 {
-    width: 5%;
+    
     position: relative;
     position: absolute;
-    top: 70%;
-    left: 47%;
+    top: 95%;
+    left: 40%;
     transform: translate(-50%,-50%);
 }
 #img2 {
-    width: 5%;
+    
     position: relative;
     position: absolute;
-    top: 70%;
+    top: 95%;
     left: 54%;
     transform: translate(-50%,-50%);
 }
 #foto1 {
     background-image: url(Imagens/night.jpg);
+}
+@media screen and (min-width:505x) and (max-width:800px) {
+#img1 {
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%,-50%)
+}
 }
