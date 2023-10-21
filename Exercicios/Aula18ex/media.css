@@ -20,6 +20,7 @@ section {
 }
 body {
     height: 100%vh;
+    background-color: brown;
 }
 }
 #imagem {
@@ -38,6 +39,10 @@ body {
     top: 95%;
     left: 40%;
     transform: translate(-50%,-50%);
+    
+}
+#img1:hover{
+    border: 2px solid rgba(0, 0, 0, 0.377);
 }
 #img2 {
     
@@ -46,16 +51,41 @@ body {
     top: 95%;
     left: 54%;
     transform: translate(-50%,-50%);
+    border-radius: 30px;
+    
+}
+#img2:hover {
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    font-size: 2px;
 }
 #foto1 {
     background-image: url(Imagens/night.jpg);
 }
-@media screen and (min-width:505x) and (max-width:800px) {
-#img1 {
-    position: relative;
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(-50%,-50%)
-}
+@media screen and (min-width:505px) and (max-width:1500px) {
+    #img1 {
+        position: relative;
+        position: absolute;
+        left: 650px;
+        transform: translate(-50%,-50%);
+    
+        border-radius: 30px;
+    
+    }
+   
+    #img2 {
+      /*  position: relative;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-50%);*/
+    
+        border-radius: 30px;
+    }
+    section {
+        position: relative;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
 }

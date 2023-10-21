@@ -39,39 +39,11 @@ header:hover {
 #imagem {
     width: 100%;
 }
-#img1 {
-    position: relative;
-    position: absolute;
-    
-    transform: translate(-50%,-50%);
 
-    border-radius: 30px;
-
-}
-#img1:hover{
-    border: 2px solid rgba(0, 0, 0, 0.377);
-}
-#img2 {
-    position: relative;
-    position: absolute;
-    
-    transform: translate(-50%,-50%);
-
-    border-radius: 30px;
-}
-#img2:hover {
-    border: 2px solid rgba(0, 0, 0, 0.37);
-    font-size: 2px;
-}
 
 
 section {
-    position: relative;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
+   
      background: white;
      width: 300px;
      margin: auto;
