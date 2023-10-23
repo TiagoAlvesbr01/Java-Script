@@ -1,0 +1,21 @@
+body {
+    margin: auto;
+    text-align: center;
+    background-color: rgba(174, 174, 236, 0.356);
+}
+#um{
+    background-color: rgba(35, 166, 226, 0.616);
+}
+#categorias {
+    padding: 10px;
+    border: 50px;
+}
+div#categorias {
+    background-color: rgba(35, 166, 226, 0.616);
+}
+img {
+   width: 250px;
+}
+#section1 {
+    display: block;
+}
