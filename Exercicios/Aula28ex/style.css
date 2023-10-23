@@ -9,9 +9,18 @@ body {
 #categorias {
     padding: 10px;
     border: 50px;
+    color: black;
+}
+#categorias a:hover {
+    color: red;
 }
 div#categorias {
     background-color: rgba(35, 166, 226, 0.616);
+}
+#produto {
+    width: 300px;
+    background-color: lightblue;
+    margin: auto;
 }
 img {
    width: 250px;
