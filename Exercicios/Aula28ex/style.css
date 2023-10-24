@@ -1,14 +1,37 @@
+header {
+    align-items: center;
+    justify-content: space-between;
+}
 header > img {
     width: 250px;
+}
+#um { /*Div do logo*/
+    background-color: rgba(35, 166, 226, 0.616);
+}
+form input, form button {
+    font-size: 1.2em;
+}
+input { /*Lacuna do formulario*/
+    height: 35px;
+    margin-bottom: 10px;
+}
+button { /*Botao do formulario*/
+    background-color: white;
+    border: white;
+    height: 40px;
+    cursor: pointer;
+    margin: 0%;
+}
+.nav{
+    background-color: brown;
+    display: inline-block;
 }
 body {
     margin: auto;
     text-align: center;
     background-color: rgba(174, 174, 236, 0.356);
 }
-#um{ /*Div do logo*/
-    background-color: rgba(35, 166, 226, 0.616);
-}
+
 #categoriasnav { /*HOME-PROMOÇOES*/
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
@@ -21,8 +44,10 @@ body {
 #categorias { /*Alimenticios, Bomboniere, Calcados, etc.*/
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
-    
     color: black;
+}
+img {
+    border-radius: 50px;
 }
 #categorias a:hover {
     color: red;
