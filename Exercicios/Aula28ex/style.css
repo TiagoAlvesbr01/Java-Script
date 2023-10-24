@@ -1,3 +1,6 @@
+header > img {
+    width: 250px;
+}
 body {
     margin: auto;
     text-align: center;
@@ -50,6 +53,6 @@ section > div {
     margin-right: 100px;
 }
 
-img {
-   width: 250px;
+ #categoriasimg {
+   width: 50px;
 }
