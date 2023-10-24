@@ -5,4 +5,7 @@
     img {
         width: 100px;
     }
+    input {
+        background-color: white;
+    }
 }

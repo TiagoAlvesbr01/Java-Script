@@ -25,6 +25,11 @@ button { /*Botao do formulario*/
 .nav{
     background-color: brown;
     display: inline-block;
+    border-radius: 10px;
+    
+}
+.nav >img {
+    width: 50px;
 }
 body {
     margin: auto;
