@@ -3,28 +3,53 @@ body {
     text-align: center;
     background-color: rgba(174, 174, 236, 0.356);
 }
-#um{
+#um{ /*Div do logo*/
     background-color: rgba(35, 166, 226, 0.616);
 }
-#categorias {
+#categoriasnav { /*HOME-PROMOÇOES*/
+    font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     border: 50px;
     color: black;
 }
-#categorias a:hover {
+#categoriasnav a:hover {
     color: red;
 }
+#categorias { /*Alimenticios, Bomboniere, Calcados, etc.*/
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    
+    color: black;
+}
+#categorias a:hover {
+    color: red;
+    border: 10px red;
+    background-color: black;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 div#categorias {
     background-color: rgba(35, 166, 226, 0.616);
 }
-#produto {
-    width: 300px;
-    background-color: lightblue;
+main {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(131, 131, 248);
+    width: 90%;
+    border-radius: 3px;
     margin: auto;
 }
+section > div {
+    width: 250px;
+    background-color: lightblue;
+    display: inline-block;
+    border: 10px;
+    padding: 10px;
+    margin-right: 100px;
+}
+
 img {
    width: 250px;
-}
-#section1 {
-    display: block;
 }
