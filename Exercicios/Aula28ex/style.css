@@ -43,10 +43,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     border: 50px;
-    
+    display: inline-block;
+}
+#categoriasnav > a {
+    text-decoration: none;
 }
 #categoriasnav a:hover {
-    color: red;
+    background-color: rgb(228, 129, 129);
 }
 #categorias { /*Alimenticios, Bomboniere, Calcados, etc.*/
     font-family: Arial, Helvetica, sans-serif;
@@ -55,9 +58,9 @@ body {
 img {
     border-radius: 50px;
 }
-#categorias a:hover {
-    color: red;
-    border: 10px red;
+#categorias p:hover {
+    border: 10px rgb(219, 43, 43);
+    background-color: rgb(228, 129, 129);
 
 }
 h1 {
