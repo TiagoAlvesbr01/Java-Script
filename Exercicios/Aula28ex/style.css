@@ -22,11 +22,13 @@ button { /*Botao do formulario*/
     cursor: pointer;
     margin: 0%;
 }
-.nav{
-    
+.nav {
     display: inline-block;
-    border-radius: 10px;
+}
+.nav > a {
     
+    border-radius: 10px;
+    text-decoration: none;
 }
 .nav >img {
     width: 50px;
