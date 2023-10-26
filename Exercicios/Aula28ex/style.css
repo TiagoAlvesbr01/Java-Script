@@ -30,7 +30,7 @@ button { /*Botao do formulario*/
     border-radius: 10px;
     text-decoration: none;
 }
-.nav >img {
+.nav > img {
     width: 50px;
 }
 body {
@@ -55,8 +55,22 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
 }
+#direita {
+    background-color: white;
+    color: red;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 50px;
+    position: relative;
+    position: absolute;
+    
+}
+#direita:hover {
+    background-color: rgba(35, 166, 226, 0.616)
+}
 img {
     border-radius: 50px;
+    width: 150px;
 }
 #categorias p:hover {
     border: 10px rgb(219, 43, 43);
@@ -69,24 +83,27 @@ h1 {
 
 div#categorias {
     background-color: rgba(35, 166, 226, 0.616);
+    border-radius: 10px;
 }
 main {
     padding: 0px;
     margin: 0px;
-    background-color: rgb(131, 131, 248);
+    
     width: 90%;
     border-radius: 3px;
     margin: auto;
 }
 section > div {
-    width: 250px;
-    background-color: lightblue;
+    
+    background-color: rgb(131, 131, 248);
     display: inline-block;
     border: 10px;
     padding: 10px;
     margin-right: 100px;
 }
-
- #categoriasimg {
-   width: 50px;
+#produto2 {
+    
+    border: 50px;
+    /*display: none;*/
 }
+
