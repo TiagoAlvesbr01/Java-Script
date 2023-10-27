@@ -75,6 +75,7 @@ img {
 #categorias p:hover {
     border: 10px rgb(219, 43, 43);
     background-color: rgb(228, 129, 129);
+    border-radius: 5px;
 
 }
 h1 {
@@ -106,7 +107,7 @@ section > div {
 }
 #bomdia {
     width: 90%;
-    height: 550px;
+    height: 350px;
     border-radius: 30px;
 
 }
