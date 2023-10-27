@@ -5,6 +5,10 @@
     img {
         width: 100px;
     }
+    #bomdia {
+        width: 90%;
+        height: 150px;
+    }
     input {
         background-color: white;
     }
