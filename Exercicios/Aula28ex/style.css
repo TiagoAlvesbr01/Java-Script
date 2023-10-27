@@ -104,5 +104,11 @@ section > div {
     width: 150px;
     height: 250px;
 }
+#bomdia {
+    width: 90%;
+    height: 350px;
+    border-radius: 30px;
+
+}
 
 

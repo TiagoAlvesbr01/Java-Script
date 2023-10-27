@@ -8,4 +8,7 @@
     input {
         background-color: white;
     }
+    main {
+        width: 90%;
+    }
 }
