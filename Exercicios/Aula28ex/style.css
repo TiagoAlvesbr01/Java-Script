@@ -100,10 +100,9 @@ section > div {
     border: 10px;
     padding: 10px;
     margin-right: 100px;
+    border-radius: 10px;
+    width: 150px;
+    height: 250px;
 }
-#produto2 {
-    
-    border: 50px;
-    /*display: none;*/
-}
+
 
