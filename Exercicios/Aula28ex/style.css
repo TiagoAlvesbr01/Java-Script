@@ -1,9 +1,22 @@
 header {
     align-items: center;
     justify-content: space-between;
+    height: 250px;
+}
+header > div > a {
+    color: white;
+}
+.emoji {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+}
+.emoji > a {
+    text-decoration: none;
 }
 header > img {
-    width: 250px;
+    width: 150px;
+    display: inline-block;
 }
 #um { /*Div do logo*/
     background-color: rgba(35, 166, 226, 0.616);
@@ -83,7 +96,7 @@ h1 {
 }
 
 div#categorias {
-    background-color: rgba(35, 166, 226, 0.616);
+    
     border-radius: 10px;
 }
 main {
