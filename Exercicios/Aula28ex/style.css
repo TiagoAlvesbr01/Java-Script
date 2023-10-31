@@ -1,7 +1,7 @@
 header {
     align-items: center;
     justify-content: space-between;
-    height: 250px;
+    height: 265px;
 }
 header > div > a {
     color: white;
