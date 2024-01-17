@@ -6,8 +6,8 @@ header {
 header > div > a {
     color: white;
 }
-#carousel-inner{
-    width: 30px;
+#carousel-inner {
+    width: 80%;
 }
 .emoji {
     display: inline-block;
